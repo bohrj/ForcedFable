@@ -1,0 +1,3469 @@
+3.3.0.alpha.224 (Bleeding Edge)
+d34cc44c3b3a7411225304eb966c329105b0dfec
+o:Sass::Tree::RootNode:@template"d"@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,500|Oxygen:400,300|Nothing+You+Could+Do);
+
+$red: #d12727;
+$grey: #343434;
+
+*
+{
+	transition: all .3s ease-in-out;
+}
+
+html
+{
+  font-family: Oxygen, sans-serif;
+  font-size: 100%;
+  font-weight: 300;
+  
+  //background-image: url("../img/witewall_3.png");
+  //background-attachment: fixed;
+}
+
+body
+{
+  line-height: 1.5em;
+}
+
+div.container
+{
+  padding: 60px 0px;
+  
+  margin: 0 auto;
+  max-width: 1020px;
+  width: 95%;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+  margin: 0px;
+  padding: 0px;
+  line-height: 1.4em;
+  font-weight: 400;
+}
+
+h1
+{
+  font-family: Ubuntu, sans-serif;
+  font-size: 1.8em;
+}
+
+h3
+{
+  font-size: 1.25em;
+}
+
+p
+{
+	margin-top: 5px;
+}
+
+img
+{
+	max-width: 100%;
+}
+
+code
+{
+	border-bottom: 1px solid BROWN;
+}
+
+a
+{
+	color: $red;
+	
+	
+	&:hover
+	{
+		i.icon-dribbble
+		{
+			color: #ff0084;
+		}
+		
+		i.icon-facebook
+		{
+			color: #3b5998;
+		}
+		
+		i.icon-twitter
+		{
+			color: #00aced;
+		}
+		
+		i.icon-forrst
+		{
+			color: #4fb64b;
+		}
+	}
+}
+
+small
+{
+  font-size: .6em;
+}
+
+header
+{
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  
+  height: 50px;
+  width: 100%;
+  
+  background-color: $grey;
+  
+  img
+  {
+    float: left;
+    display: inline-block;
+    
+    margin: 10px;
+    
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px rgba(50, 50, 50, 0.75);
+    
+    border: 2px solid #FFF;
+    
+    -webkit-transition: all .2s ease-in-out;
+    
+    &:hover
+    {
+      //margin-left: 50px;
+      -webkit-transform: scale(1.2) rotate(33deg);
+    }
+  }
+}
+
+a.menu-toggle
+{
+	position: absolute;
+	top: 0;
+	left: 0; right: 0;
+
+	display: none;
+	width: 100%;
+	line-height: 50px;
+	
+	text-align: center;
+	text-decoration: none;
+	
+	font-size: 2em;
+	background-color: $grey;
+	color: WHITE;
+}
+
+nav
+{
+  float: right;
+  display: inline-block;
+}
+
+ul.nav
+{
+  list-style-type: none;
+  margin: 0;
+  
+  li
+  {
+    display: inline-block;
+    
+    padding: 0 10px;
+    min-height: 50px;
+    
+    &:hover
+    {
+      background-color: darken($grey, 10);
+    }
+    
+    a
+    {
+      display: block;
+      
+      color: #FFF;
+      text-decoration: none;
+      line-height: 50px;
+      
+      -webkit-font-smoothing: antialiased;
+    }
+  }
+}
+
+.main_content
+{
+  position: relative;
+}
+
+.articles
+{ 
+  float: left;
+  width: 70%;
+}
+
+.sidebar
+{
+  float: right;
+  
+  width: 25%;
+  
+  h3
+  {
+	  font-family: 'Nothing You Could Do', sans-serif;
+	  font-size: 1.5em;
+  }
+  
+  p
+  {
+      
+      img
+      {
+      	float: left;
+      	margin-right: 5px;
+      	
+      	border-radius: 50%;
+      	opacity: 1;
+      	
+        -webkit-transition: border-radius .5s ease-in-out;
+      
+        &:hover
+        {
+        	border-radius: 0;
+        	opacity: .8;
+        }
+      
+    }
+  }
+}
+  
+div.widget
+{
+
+	h4
+	{
+		font-family: 'Nothing You Could Do', sans-serif;
+	}
+
+	ul
+	{
+		list-style-type: none;
+		padding-left: 0;
+		
+		li
+		{
+		  box-shadow: 0 3px 3px -4px $grey;
+		  overflow: hidden;
+		  
+		  &:first-of-type
+		  {
+		  	border-top: 1px solid lighten($grey, 60);
+		  }
+		  
+		  a
+		  {      
+		    display: block;
+		    width: 100%;
+		    
+		    padding: 10px 0px;
+		    
+		    text-decoration: none;
+		    
+		    -webkit-transition: all .2s ease-in-out;
+		    
+		    &:hover
+		    {
+		      padding-left: 40px;
+		    }
+		  }
+		}
+	}
+}
+
+ul.social
+{
+
+	display: table;
+	list-style-type: none;
+	margin-left: -40px;
+	
+	width: 100%;
+	li
+	{
+		display: table-cell;
+		margin: auto;
+		
+		text-align: center;
+		
+		$height: 50px;
+		background-color: rgba(218,207,191, .5);
+		
+		height: $height;
+		
+		border-left: 1px solid darken(#dacfbf, 1);
+		
+		-webkit-transition: all .2s linear;
+		
+		&:hover, &:active
+		{
+			background-color: rgba(218,207,191, 1)
+		}
+		
+		&:first-of-type
+		{
+			border-left: none;
+			
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px;
+		}
+		
+		&:last-of-type
+		{
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 5px;
+		}
+		
+		a
+		{
+			display: block;
+			height: 100%;
+			line-height: $height;
+			color: lighten($grey, 20);
+			font-size: 1.3em;
+			text-decoration: none;
+			
+			&:hover i
+			{
+				-webkit-transition: all .2s ease-in-out;
+			}
+			
+		}
+	}
+}
+
+article
+{
+  margin-bottom: 50px;
+  
+  padding: 5px 10px;
+  
+  h1
+  {
+	  margin: auto;
+  
+	  a
+	  {
+	    text-decoration: none;
+	    
+	    &:hover
+	    {
+	      text-decoration: underline;
+	    }
+	  }
+  }
+  
+  img
+  {
+  
+  	  &.center
+  	  {
+	  	  display: block;
+	  	  margin: 0 auto;
+  	  }
+	  padding: 5px;
+	  
+	  box-shadow: 0 0 3px $grey;
+  }
+  
+  a.btn
+  {
+    float: right;
+  }
+  
+  p
+  {
+    margin-top: 5px;
+  }
+}
+
+div.featured-post
+{
+
+	margin-bottom: 20px;
+	
+	& > small
+	{
+		color: $red;
+		font-family: 'Nothing You Could Do', sans-serif;
+	}
+	
+	hr
+	{
+		color: $grey;
+		opacity: .5;
+	}
+}
+
+a.work-header
+{
+	font-family: 'Nothing You Could Do', sans-serif;
+	color: $grey;
+	text-decoration: none;
+}
+
+article.work
+{
+	position: relative;
+	
+	a.thumb
+	{
+		position: relative;
+	
+		display: table-cell;
+		
+		background-color: rgba(255,255,255,0.5);
+		
+		//box-shadow: 0px 0px 3px lighten($grey, 20);
+		text-decoration: none;
+		
+		-webkit-transition: all .3s linear;
+		
+		&:hover
+		{
+			background-color: #FFF;
+		}
+		
+		img
+		{
+			width: 200px;
+			
+			padding: 0px;
+			
+			box-shadow: none;
+		}
+		
+		span.subtitle
+		{
+			position: absolute;
+			bottom: -.5em;
+			left: 0px;
+			
+			display: block;
+			width: 100%;
+			
+			background-color: rgba($grey, .9);
+			
+			text-align: center;
+			
+			font-size: .8em;
+			color: white;
+			
+			font-style: italic;
+		}
+	}
+	
+	.work-image
+	{
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+div.technology
+{
+	margin-bottom: 10px;
+
+	background-color: #FFF;
+	padding: 15px;
+	
+	border-radius: 3px;
+	
+	box-shadow: 0 0 2px lighten($grey, 20);
+	
+	a
+	{
+		text-decoration: none;
+		
+		&:hover
+		{
+			color: $grey;
+		}
+		
+		h2
+		{
+			border-bottom: 1px dashed lighten($grey, 60);
+			margin-bottom: 15px;
+		}
+	}
+}
+
+a.btn
+{
+  display: inline-block;
+  border-radius: 3px;
+  background-color: $red;
+  color: #FFF;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: .9em;
+  text-shadow: none;
+  
+  border-bottom: 3px solid darken($red, 20);
+  
+  -webkit-font-smoothing: antialiased;
+    
+  -webkit-transition: all .5s ease-in-out;
+  
+  &:hover, &:active
+  {
+    background-color: darken($red, 10);
+  }
+  
+  &:active
+  {
+	  border: none;
+  }
+}
+
+div.hero
+{
+  position: relative;
+  
+  width: 100%;
+  height: 250px;
+  
+  margin-bottom: 20px;
+  
+  border-radius: 3px;
+  
+  background-image: url("../img/hero.jpg");
+  background-size: cover;
+}
+
+div.blurb
+{
+  position: absolute;
+  z-index: 0;
+  
+  top: 20px;
+  bottom: 20px;
+  left: 20px;
+  right: 50%;
+  
+  width: 45%;
+  
+  overflow: hidden;
+  
+  padding: 15px;
+  background-color: rgba(0,0,0,.5);
+  color: #FFF;
+  text-shadow: 0 0 1px #000;
+  
+  border-radius: 5px;
+  
+  h3
+  {
+	  font-family: 'Nothing You Could Do', sans-serif;
+	  font-size: 1.5em;
+  }
+  
+  a.btn
+  {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    float: right;
+  }
+}
+
+footer
+{
+	clear: both;
+	
+	font-family: 'Nothing You Could Do', sans-serif;
+	font-size: .8em;
+	
+	color: $grey;
+	text-align: center;
+	
+	ul.nav
+	{
+		margin-left: -40px;
+		li
+		{
+			
+			a
+			{
+				font-size: 1.3em;
+				color: $red;
+				
+				&:hover
+				{
+					color: $grey;
+				}
+			}
+			
+			&:hover
+			{
+				background-color: rgba(0,0,0,0);
+			}
+		}
+	}
+}
+
+//Mobile
+@media screen and (max-width: 400px)
+{
+
+	div.container
+	{
+		padding-top: 10px !important;
+	}
+
+	header
+	{
+		position: relative;
+		
+		ul.nav
+		{
+			margin-left: -40px;
+		
+			position: absolute;
+			top: 50px;
+			left: 0;
+			
+			display: none;
+			width: 100%;
+			height: auto;
+			text-align: center;
+			
+			li
+			{
+				background-color: $grey;
+				display: block;
+				
+				border-top: 1px solid lighten($grey, 5);
+			}
+		}
+		
+		a.menu-toggle
+		{
+			display: block;
+		}
+	}
+	
+	article.work
+	{
+		a.thumb
+		{
+			display: block;
+			width: 200px;
+			margin: 0 auto;
+		}
+	}
+	
+	.sidebar
+	{
+		border-top: 1px solid lighten($grey, 50);
+		padding-top: 10px;
+	}
+	
+	nav
+	{
+		ul
+		{
+			margin-left: -40px;
+		}
+	}
+}
+
+//Desktop
+@media screen and (max-width: 1020px)
+{
+	div.hero
+	{
+		border-radius: 0;
+	}
+}
+
+//Tablet
+@media screen and (max-width: 800px)
+{
+
+  div.blurb
+  {
+    width: auto;
+    right: 20px;
+  }
+  
+  footer
+  {
+    height: auto;
+    text-align: center;
+    
+    ul.nav
+    {
+	    display: block !important;
+    }
+    
+    ul.nav, p
+    {
+      position: relative;
+      left: 0; right: 0;
+      width: auto;
+    }
+  }
+  
+  div.articles, div.sidebar
+  {
+  	  position: relative;
+  	  margin: 0 auto;
+	  width: 90%;
+	  max-width: 100%;
+	  float: none;
+	  clear: both;
+  }
+  
+  div.container
+  {
+	  padding: 60px 0px;
+  }
+  
+  div.owner
+  {
+	  margin-bottom: 35px;
+  }
+  
+  header
+  {
+	  img
+	  {
+		  display: none;
+	  }
+  }
+}
+
+.twitter-tweet
+{
+	max-width: 100% !important;
+	margin: 0 auto !important;
+}
+:@source_rangeo:Sass::Source::Range	:@start_poso:Sass::Source::Position:
+@linei:@offseti:@importero: Sass::Importers::Filesystem:@same_name_warningso:Set:
+@hash{ :
+@root"N/www/sites/jordanforeman/wwwroot/wp-content/themes/jordanforeman2013/scss:
+@file"style.scss:@end_poso;
+;i;i:@options{ :@has_childrenT;i:@children[-o:Sass::Tree::CssImportNode:@query[ :@value" ;o;	;	o;
+;i;i;@	;@;o;
+;i;il;@;i:	@urio: Sass::Script::Tree::Literal	;o: Sass::Script::Value::String:
+@type:identifier;"curl(http://fonts.googleapis.com/css?family=Ubuntu:400,500|Oxygen:400,300|Nothing+You+Could+Do);{:importer@	:filename@;o;	;	o;
+;i;i;@	;@;o;
+;i;il:@filename@;i;[ o:Sass::Tree::VariableNode:
+@name"red;o;	;	o;
+;i;i;@	;@;o;
+;i;i;@:@guarded0;i:
+@expro;	;o:Sass::Script::Value::Color;0:@attrs{	:redi—:
+alphai:
+greeni,:	bluei,;@;o;	;	o;
+;i;i;@	;@;o;
+;i;i;"@;i;[ o;#;$"	grey;o;	;	o;
+;i	;i;@	;@;o;
+;i	;i;@;%0;i	;&o;	;o;';0;({	;)i9;*i;+i9;,i9;@;o;	;	o;
+;i	;i;@	;@;o;
+;i	;i;"@;i	;[ o:Sass::Tree::RuleNode:@selector_source_rangeo;	;	o;
+;i;i;@	;@;o;
+;i;i;o;	;	o;
+;i;i;@	;@;o;
+;i;i:@parsed_ruleso:"Sass::Selector::CommaSequence:@members[o:Sass::Selector::Sequence;1[o:#Sass::Selector::SimpleSequence:@subject0;1[o:Sass::Selector::Universal:@namespace0;"" ;i;o;	;	o;
+;i;i;0;@E;o;
+;i;i;"@E:@sourceso;;{ ;i;"@E;i;@:
+@rule["*;T;i;[o:Sass::Tree::PropNode;$["transition:@value_source_rangeo;	;	o;
+;i;i;@	;@;o;
+;i;i&;o;;o;;;;"all .3s ease-in-out;@;o;	;	o;
+;i;i;@	;@;o;
+;i;i&;i;o;	;	o;
+;i;i;@	;@;@S;@:@name_source_rangeo;	;	@[;@	;@;o;
+;i;i;i:@prop_syntax:new;[ :
+@tabsi ;>i o;-;.o;	;	o;
+;i;i;@	;@;o;
+;i;i;o;	;	o;
+;i;i;@	;@;o;
+;i;i;/o;0;1[o;2;1[o;3;40;1[o:Sass::Selector::Element	;$["	html;60;"" ;i;o;	;	o;
+;i;i;0;@o;o;
+;i;i
+;"@o;7o;;{ ;i;"@o;i;@;8["	html;T;i;[	o;9;$["font-family;:o;	;	o;
+;i;i;@	;@;o;
+;i;i';o;;o;;;;"Oxygen, sans-serif;@;o;	;	o;
+;i;i;@	;@;o;
+;i;i';i;o;	;	o;
+;i;i;@	;@;@};@;;o;	;	@Ä;@	;@;o;
+;i;i;i;<;=;[ ;>i o;9;$["font-size;:o;	;	o;
+;i;i;@	;@;o;
+;i;i;o;;o;;;;"	100%;@;o;	;	o;
+;i;i;@	;@;o;
+;i;i;i;o;	;	o;
+;i;i;@	;@;@â;@;;o;	;	@ë;@	;@;o;
+;i;i;i;<;=;[ ;>i o;9;$["font-weight;:o;	;	o;
+;i;i;@	;@;o;
+;i;i;o;;o;;;;"300;@;o;	;	o;
+;i;i;@	;@;o;
+;i;i;i;o;	;	o;
+;i;i;@	;@;@ö;@;;o;	;	@¢;@	;@;o;
+;i;i;i;<;=;[ ;>i o:Sass::Tree::CommentNode
+;:silent;["Y/*background-image: url("../img/witewall_3.png");
+ *background-attachment: fixed; */;@;i;[ ;>i o;-;.o;	;	o;
+;i;i;@	;@;o;
+;i;i;o;	;	o;
+;i;i;@	;@;o;
+;i;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["	body;60;"" ;i;o;	;	o;
+;i;i;0;@∫;o;
+;i;i
+;"@∫;7o;;{ ;i;"@∫;i;@;8["	body;T;i;[o;9;$["line-height;:o;	;	o;
+;i;i;@	;@;o;
+;i;i;o;;o;;;;"
+1.5em;@;o;	;	o;
+;i;i;@	;@;o;
+;i;i;i;o;	;	o;
+;i;i;@	;@;@»;@;;o;	;	@–;@	;@;o;
+;i;i;i;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;i;i;@	;@;o;
+;i ;i;o;	;	o;
+;i;i;@	;@;o;
+;i ;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["div;60;"" ;io:Sass::Selector::Class;$["container;"@‰;i;o;	;	o;
+;i;i;0;@‰;o;
+;i;i;"@‰;7o;;{ ;i;"@‰;i;@;8["div.container;T;i;[	o;9;$["padding;:o;	;	o;
+;i!;i;@	;@;o;
+;i!;i;o;;o;;;;"60px 0px;@;o;	;	o;
+;i!;i;@	;@;o;
+;i!;i;i!;o;	;	o;
+;i!;i;@	;@;@ı;@;;o;	;	@˝;@	;@;o;
+;i!;i;i!;<;=;[ ;>i o;9;$["margin;:o;	;	o;
+;i#;i;@	;@;o;
+;i#;i;o;;o;;;;"0 auto;@;o;	;	o;
+;i#;i;@	;@;o;
+;i#;i;i#;o;	;	o;
+;i#;i;@	;@;@;@;;o;	;	@;@	;@;o;
+;i#;i;i#;<;=;[ ;>i o;9;$["max-width;:o;	;	o;
+;i$;i;@	;@;o;
+;i$;i;o;;o;;;;"1020px;@;o;	;	o;
+;i$;i;@	;@;o;
+;i$;i;i$;o;	;	o;
+;i$;i;@	;@;@;@;;o;	;	@;@	;@;o;
+;i$;i;i$;<;=;[ ;>i o;9;$["
+width;:o;	;	o;
+;i%;i;@	;@;o;
+;i%;i;o;;o;;;;"95%;@;o;	;	o;
+;i%;i;@	;@;o;
+;i%;i;i%;o;	;	o;
+;i%;i;@	;@;@(;@;;o;	;	@0;@	;@;o;
+;i%;i;i%;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;i(;i;@	;@;o;
+;i);i;o;	;	o;
+;i(;i;@	;@;o;
+;i);i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["h1;60;"" ;i(;o;	;	o;
+;i;i;0;@D;o;
+;i;i;"@D;7o;;{ ;i(o;2;1[o;3;40;1[o;?	;$["h2;60;"@D;i(;o;	;	o;
+;i;i	;0;@D;o;
+;i;i;"@D;7o;;{ ;i(o;2;1[o;3;40;1[o;?	;$["h3;60;"@D;i(;o;	;	o;
+;i;i;0;@D;o;
+;i;i;"@D;7o;;{ ;i(o;2;1[o;3;40;1[o;?	;$["h4;60;"@D;i(;o;	;	o;
+;i;i;0;@D;o;
+;i;i;"@D;7o;;{ ;i(o;2;1[o;3;40;1[o;?	;$["h5;60;"@D;i(;o;	;	o;
+;i;i;0;@D;o;
+;i;i;"@D;7o;;{ ;i(o;2;1[o;3;40;1[o;?	;$["h6;60;"@D;i(;o;	;	o;
+;i;i;0;@D;o;
+;i;i;"@D;7o;;{ ;i(;"@D;i(;@;8["h1,h2,h3,h4,h5,h6;T;i(;[	o;9;$["margin;:o;	;	o;
+;i*;i;@	;@;o;
+;i*;i;o;;o;;;;"0px;@;o;	;	o;
+;i*;i;@	;@;o;
+;i*;i;i*;o;	;	o;
+;i*;i;@	;@;@é;@;;o;	;	@ñ;@	;@;o;
+;i*;i;i*;<;=;[ ;>i o;9;$["padding;:o;	;	o;
+;i+;i;@	;@;o;
+;i+;i;o;;o;;;;"0px;@;o;	;	o;
+;i+;i;@	;@;o;
+;i+;i;i+;o;	;	o;
+;i+;i;@	;@;@ü;@;;o;	;	@ß;@	;@;o;
+;i+;i;i+;<;=;[ ;>i o;9;$["line-height;:o;	;	o;
+;i,;i;@	;@;o;
+;i,;i;o;;o;;;;"
+1.4em;@;o;	;	o;
+;i,;i;@	;@;o;
+;i,;i;i,;o;	;	o;
+;i,;i;@	;@;@∞;@;;o;	;	@∏;@	;@;o;
+;i,;i;i,;<;=;[ ;>i o;9;$["font-weight;:o;	;	o;
+;i-;i;@	;@;o;
+;i-;i;o;;o;;;;"400;@;o;	;	o;
+;i-;i;@	;@;o;
+;i-;i;i-;o;	;	o;
+;i-;i;@	;@;@¡;@;;o;	;	@…;@	;@;o;
+;i-;i;i-;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;i0;i;@	;@;o;
+;i1;i;o;	;	o;
+;i0;i;@	;@;o;
+;i1;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["h1;60;"" ;i0;o;	;	o;
+;i;i;0;@›;o;
+;i;i;"@›;7o;;{ ;i0;"@›;i0;@;8["h1;T;i0;[o;9;$["font-family;:o;	;	o;
+;i2;i;@	;@;o;
+;i2;i';o;;o;;;;"Ubuntu, sans-serif;@;o;	;	o;
+;i2;i;@	;@;o;
+;i2;i';i2;o;	;	o;
+;i2;i;@	;@;@Î;@;;o;	;	@Û;@	;@;o;
+;i2;i;i2;<;=;[ ;>i o;9;$["font-size;:o;	;	o;
+;i3;i;@	;@;o;
+;i3;i;o;;o;;;;"
+1.8em;@;o;	;	o;
+;i3;i;@	;@;o;
+;i3;i;i3;o;	;	o;
+;i3;i;@	;@;@¸;@;;o;	;	@;@	;@;o;
+;i3;i;i3;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;i6;i;@	;@;o;
+;i7;i;o;	;	o;
+;i6;i;@	;@;o;
+;i7;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["h3;60;"" ;i6;o;	;	o;
+;i;i;0;@;o;
+;i;i;"@;7o;;{ ;i6;"@;i6;@;8["h3;T;i6;[o;9;$["font-size;:o;	;	o;
+;i8;i;@	;@;o;
+;i8;i;o;;o;;;;"1.25em;@;o;	;	o;
+;i8;i;@	;@;o;
+;i8;i;i8;o;	;	o;
+;i8;i;@	;@;@&;@;;o;	;	@.;@	;@;o;
+;i8;i;i8;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;i;;i;@	;@;o;
+;i<;i;o;	;	o;
+;i;;i;@	;@;o;
+;i<;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["p;60;"" ;i;;o;	;	o;
+;i;i;0;@B;o;
+;i;i;"@B;7o;;{ ;i;;"@B;i;;@;8["p;T;i;;[o;9;$["margin-top;:o;	;	o;
+;i=;i;@	;@;o;
+;i=;i;o;;o;;;;"5px;@;o;	;	o;
+;i=;i;@	;@;o;
+;i=;i;i=;o;	;	o;
+;i=;i;@	;@;@P;@;;o;	;	@X;@	;@;o;
+;i=;i;i=;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;i@;i;@	;@;o;
+;iA;i;o;	;	o;
+;i@;i;@	;@;o;
+;iA;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["img;60;"" ;i@;o;	;	o;
+;i;i;0;@l;o;
+;i;i	;"@l;7o;;{ ;i@;"@l;i@;@;8["img;T;i@;[o;9;$["max-width;:o;	;	o;
+;iB;i;@	;@;o;
+;iB;i;o;;o;;;;"	100%;@;o;	;	o;
+;iB;i;@	;@;o;
+;iB;i;iB;o;	;	o;
+;iB;i;@	;@;@z;@;;o;	;	@Ç;@	;@;o;
+;iB;i;iB;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;iE;i;@	;@;o;
+;iF;i;o;	;	o;
+;iE;i;@	;@;o;
+;iF;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["	code;60;"" ;iE;o;	;	o;
+;i;i;0;@ñ;o;
+;i;i
+;"@ñ;7o;;{ ;iE;"@ñ;iE;@;8["	code;T;iE;[o;9;$["border-bottom;:o;	;	o;
+;iG;i;@	;@;o;
+;iG;i%;o;;o;;;;"1px solid BROWN;@;o;	;	o;
+;iG;i;@	;@;o;
+;iG;i%;iG;o;	;	o;
+;iG;i;@	;@;@§;@;;o;	;	@¨;@	;@;o;
+;iG;i;iG;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;iJ;i;@	;@;o;
+;iK;i;o;	;	o;
+;iJ;i;@	;@;o;
+;iK;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["a;60;"" ;iJ;o;	;	o;
+;i;i;0;@¿;o;
+;i;i;"@¿;7o;;{ ;iJ;"@¿;iJ;@;8["a;T;iJ;[o;9;$["
+color;:o;	;	o;
+;iL;i;@	;@;o;
+;iL;i;o:!Sass::Script::Tree::Variable;$"red;o;	;	o;
+;iL;i;@	;@;o;
+;iL;i;"@;@;iL:@underscored_name"red;o;	;	o;
+;iL;i;@	;@;@Œ;@;;o;	;	@÷;@	;@;o;
+;iL;i;iL;<;=;[ ;>i o;-;.o;	;	o;
+;iO;i;@	;@;o;
+;iP;i;o;	;	o;
+;iO;i;@	;@;o;
+;iP;i;/o;0;1[o;2;1[o;3;40;1[o:Sass::Selector::Parent;"" ;iOo:Sass::Selector::Pseudo
+:@syntactic_type:
+class;$["
+hover;"@Ë;iO:	@arg0;o;	;	o;
+;i;i;0;@Ë;o;
+;i;i;"@Ë;7o;;{ ;iO;"@Ë;iO;@;8["&:hover;T;iO;[	o;-;.o;	;	o;
+;iQ;i;@	;@;o;
+;iR;i;o;	;	o;
+;iQ;i;@	;@;o;
+;iR;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["i;60;"" ;iQo;B;$["icon-dribbble;"@;iQ;o;	;	o;
+;i;i;0;@;o;
+;i;i;"@;7o;;{ ;iQ;"@;iQ;@;8["i.icon-dribbble;T;iQ;[o;9;$["
+color;:o;	;	o;
+;iS;i;@	;@;o;
+;iS;i;o;;o;;;;"#ff0084;@;o;	;	o;
+;iS;i;@	;@;o;
+;iS;i;iS;o;	;	o;
+;iS;i	;@	;@;@;@;;o;	;	@;@	;@;o;
+;iS;i;iS;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;iV;i;@	;@;o;
+;iW;i;o;	;	o;
+;iV;i;@	;@;o;
+;iW;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["i;60;"" ;iVo;B;$["icon-facebook;"@1;iV;o;	;	o;
+;i;i;0;@1;o;
+;i;i;"@1;7o;;{ ;iV;"@1;iV;@;8["i.icon-facebook;T;iV;[o;9;$["
+color;:o;	;	o;
+;iX;i;@	;@;o;
+;iX;i;o;;o;;;;"#3b5998;@;o;	;	o;
+;iX;i;@	;@;o;
+;iX;i;iX;o;	;	o;
+;iX;i	;@	;@;@B;@;;o;	;	@J;@	;@;o;
+;iX;i;iX;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;i[;i;@	;@;o;
+;i\;i;o;	;	o;
+;i[;i;@	;@;o;
+;i\;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["i;60;"" ;i[o;B;$["icon-twitter;"@^;i[;o;	;	o;
+;i;i;0;@^;o;
+;i;i;"@^;7o;;{ ;i[;"@^;i[;@;8["i.icon-twitter;T;i[;[o;9;$["
+color;:o;	;	o;
+;i];i;@	;@;o;
+;i];i;o;;o;;;;"#00aced;@;o;	;	o;
+;i];i;@	;@;o;
+;i];i;i];o;	;	o;
+;i];i	;@	;@;@o;@;;o;	;	@w;@	;@;o;
+;i];i;i];<;=;[ ;>i ;>i o;-;.o;	;	o;
+;i`;i;@	;@;o;
+;ia;i;o;	;	o;
+;i`;i;@	;@;o;
+;ia;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["i;60;"" ;i`o;B;$["icon-forrst;"@ã;i`;o;	;	o;
+;i;i;0;@ã;o;
+;i;i;"@ã;7o;;{ ;i`;"@ã;i`;@;8["i.icon-forrst;T;i`;[o;9;$["
+color;:o;	;	o;
+;ib;i;@	;@;o;
+;ib;i;o;;o;;;;"#4fb64b;@;o;	;	o;
+;ib;i;@	;@;o;
+;ib;i;ib;o;	;	o;
+;ib;i	;@	;@;@ú;@;;o;	;	@§;@	;@;o;
+;ib;i;ib;<;=;[ ;>i ;>i ;>i ;>i o;-;.o;	;	o;
+;ig;i;@	;@;o;
+;ih;i;o;	;	o;
+;ig;i;@	;@;o;
+;ih;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["
+small;60;"" ;ig;o;	;	o;
+;i;i;0;@∏;o;
+;i;i;"@∏;7o;;{ ;ig;"@∏;ig;@;8["
+small;T;ig;[o;9;$["font-size;:o;	;	o;
+;ii;i;@	;@;o;
+;ii;i;o;;o;;;;"	.6em;@;o;	;	o;
+;ii;i;@	;@;o;
+;ii;i;ii;o;	;	o;
+;ii;i;@	;@;@∆;@;;o;	;	@Œ;@	;@;o;
+;ii;i;ii;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;il;i;@	;@;o;
+;im;i;o;	;	o;
+;il;i;@	;@;o;
+;im;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["header;60;"" ;il;o;	;	o;
+;i;i;0;@‚;o;
+;i;i;"@‚;7o;;{ ;il;"@‚;il;@;8["header;T;il;[o;9;$["position;:o;	;	o;
+;in;i;@	;@;o;
+;in;i;o;;o;;;;"
+fixed;@;o;	;	o;
+;in;i;@	;@;o;
+;in;i;in;o;	;	o;
+;in;i;@	;@;@;@;;o;	;	@¯;@	;@;o;
+;in;i;in;<;=;[ ;>i o;9;$["z-index;:o;	;	o;
+;io;i;@	;@;o;
+;io;i;o;;o;;;;"1;@;o;	;	o;
+;io;i;@	;@;o;
+;io;i;io;o;	;	o;
+;io;i;@	;@;@;@;;o;	;	@	;@	;@;o;
+;io;i;io;<;=;[ ;>i o;9;$["top;:o;	;	o;
+;ip;i;@	;@;o;
+;ip;i;o;;o;;;;"0;@;o;	;	o;
+;ip;i;@	;@;o;
+;ip;i;ip;o;	;	o;
+;ip;i;@	;@;@;@;;o;	;	@;@	;@;o;
+;ip;i;ip;<;=;[ ;>i o;9;$["	left;:o;	;	o;
+;iq;i;@	;@;o;
+;iq;i;o;;o;;;;"0;@;o;	;	o;
+;iq;i;@	;@;o;
+;iq;i;iq;o;	;	o;
+;iq;i;@	;@;@#;@;;o;	;	@+;@	;@;o;
+;iq;i;iq;<;=;[ ;>i o;9;$["
+right;:o;	;	o;
+;ir;i;@	;@;o;
+;ir;i;o;;o;;;;"0;@;o;	;	o;
+;ir;i;@	;@;o;
+;ir;i;ir;o;	;	o;
+;ir;i;@	;@;@4;@;;o;	;	@<;@	;@;o;
+;ir;i;ir;<;=;[ ;>i o;9;$["height;:o;	;	o;
+;it;i;@	;@;o;
+;it;i;o;;o;;;;"	50px;@;o;	;	o;
+;it;i;@	;@;o;
+;it;i;it;o;	;	o;
+;it;i;@	;@;@E;@;;o;	;	@M;@	;@;o;
+;it;i;it;<;=;[ ;>i o;9;$["
+width;:o;	;	o;
+;iu;i;@	;@;o;
+;iu;i;o;;o;;;;"	100%;@;o;	;	o;
+;iu;i;@	;@;o;
+;iu;i;iu;o;	;	o;
+;iu;i;@	;@;@V;@;;o;	;	@^;@	;@;o;
+;iu;i;iu;<;=;[ ;>i o;9;$["background-color;:o;	;	o;
+;iw;i;@	;@;o;
+;iw;i;o;C;$"	grey;o;	;	o;
+;iw;i;@	;@;o;
+;iw;i;"@;@;iw;D"	grey;o;	;	o;
+;iw;i;@	;@;@g;@;;o;	;	@o;@	;@;o;
+;iw;i;iw;<;=;[ ;>i o;-;.o;	;	o;
+;iy;i;@	;@;o;
+;iz;i;o;	;	o;
+;iy;i;@	;@;o;
+;iz;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["img;60;"" ;iy;o;	;	o;
+;i;i;0;@É;o;
+;i;i	;"@É;7o;;{ ;iy;"@É;iy;@;8["img;T;iy;[o;9;$["
+float;:o;	;	o;
+;i{;i;@	;@;o;
+;i{;i;o;;o;;;;"	left;@;o;	;	o;
+;i{;i;@	;@;o;
+;i{;i;i{;o;	;	o;
+;i{;i
+;@	;@;@ë;@;;o;	;	@ô;@	;@;o;
+;i{;i;i{;<;=;[ ;>i o;9;$["display;:o;	;	o;
+;i|;i;@	;@;o;
+;i|;i;o;;o;;;;"inline-block;@;o;	;	o;
+;i|;i;@	;@;o;
+;i|;i;i|;o;	;	o;
+;i|;i
+;@	;@;@¢;@;;o;	;	@™;@	;@;o;
+;i|;i;i|;<;=;[ ;>i o;9;$["margin;:o;	;	o;
+;i~;i;@	;@;o;
+;i~;i;o;;o;;;;"	10px;@;o;	;	o;
+;i~;i;@	;@;o;
+;i~;i;i~;o;	;	o;
+;i~;i
+;@	;@;@≥;@;;o;	;	@ª;@	;@;o;
+;i~;i;i~;<;=;[ ;>i o;9;$["border-radius;:o;	;	o;
+;i{;i;@	;@;o;
+;i{;i;o;;o;;;;"50%;@;o;	;	o;
+;i{;i;@	;@;o;
+;i{;i;i{;o;	;	o;
+;i{;i
+;@	;@;@ƒ;@;;o;	;	@Ã;@	;@;o;
+;i{;i;i{;<;=;[ ;>i o;9;$["box-shadow;:o;	;	o;
+;i|;i;@	;@;o;
+;i|;i8;o:$Sass::Script::Tree::ListLiteral:@elements[	o;	;o: Sass::Script::Value::Number
+:@original"0px:@denominator_units[ ;i :@numerator_units["px;@;o;	;	o;
+;i|;i;@	;@;o;
+;i|;i;"@;i|o;	;o;L
+;M"0px;N[ ;i ;O["px;@;o;	;	o;
+;i|;i;@	;@;o;
+;i|;i;"@;i|o;	;o;L
+;M"3px;N[ ;i;O["px;@;o;	;	o;
+;i|;i;@	;@;o;
+;i|;i!;"@;i|o: Sass::Script::Tree::Funcall;$"	rgba:@splat0;o;	;	o;
+;i|;i";@	;@;o;
+;i|;i8;"@;@;i|:@keywordso:Sass::Util::NormalizedMap:	@mapIC:OrderedHash{ :
+@keys[ :@key_strings{ :@_dc_obj@˘:
+@args[	o;	;o;L
+;M"50;N[ ;i7;O[ ;@;o;	;	o;
+;i|;i';@	;@;o;
+;i|;i);"@;i|o;	;o;L
+;M"50;N@ ;i7;O[ ;@;o;	;	o;
+;i|;i+;@	;@;o;
+;i|;i-;"@;i|o;	;o;L
+;M"50;N@ ;i7;O[ ;@;o;	;	o;
+;i|;i/;@	;@;o;
+;i|;i1;"@;i|o;	;o;L
+;M"	0.75;N@ ;f	0.75;O[ ;@;o;	;	o;
+;i|;i3;@	;@;o;
+;i|;i7;"@;i|;o;	;	o;
+;i|;i;@	;@;o;
+;i|;i8;"@;@;i|:@separator:
+space;o;	;	o;
+;i|;i
+;@	;@;@’;@;;o;	;	@;@	;@;o;
+;i|;i;i|;<;=;[ ;>i o;9;$["border;:o;	;	o;
+;i~;i;@	;@;o;
+;i~;i ;o;;o;;;;"2px solid #FFF;@;o;	;	o;
+;i~;i;@	;@;o;
+;i~;i ;i~;o;	;	o;
+;i~;i
+;@	;@;@(;@;;o;	;	@0;@	;@;o;
+;i~;i;i~;<;=;[ ;>i o;9;$["-webkit-transition;:o;	;	o;
+;iÄ;i;@	;@;o;
+;iÄ;i1;o;;o;;;;"all .2s ease-in-out;@;o;	;	o;
+;iÄ;i;@	;@;o;
+;iÄ;i1;iÄ;o;	;	o;
+;iÄ;i
+;@	;@;@9;@;;o;	;	@A;@	;@;o;
+;iÄ;i;iÄ;<;=;[ ;>i o;-;.o;	;	o;
+;iÇ;i
+;@	;@;o;
+;iÉ;i
+;o;	;	o;
+;iÇ;i
+;@	;@;o;
+;iÉ;i
+;/o;0;1[o;2;1[o;3;40;1[o;E;"" ;iÇo;F
+;G;H;$["
+hover;"@S;iÇ;I0;o;	;	o;
+;i;i;0;@S;o;
+;i;i;"@S;7o;;{ ;iÇ;"@S;iÇ;@;8["&:hover;T;iÇ;[o;@
+;;A;["/*margin-left: 50px; */;@;iÑ;[ o;9;$["-webkit-transform;:o;	;	o;
+;iÖ;i;@	;@;o;
+;iÖ;i7;o;J;K[o;P;$"
+scale;Q0;o;	;	o;
+;iÖ;i;@	;@;o;
+;iÖ;i);"@;@;iÖ;Ro;S;TIC;U{ ;V[ ;W{ ;X@q;Y[o;	;o;L
+;M"1.2;N@ ;f1.2 33;O[ ;@;o;	;	o;
+;iÖ;i%;@	;@;o;
+;iÖ;i(;"@;iÖo;P;$"rotate;Q0;o;	;	o;
+;iÖ;i*;@	;@;o;
+;iÖ;i7;"@;@;iÖ;Ro;S;TIC;U{ ;V[ ;W{ ;X@É;Y[o;	;o;L
+;M"
+33deg;N[ ;i&;O["deg;@;o;	;	o;
+;iÖ;i1;@	;@;o;
+;iÖ;i6;"@;iÖ;o;	;	o;
+;iÖ;i;@	;@;o;
+;iÖ;i7;"@;@;iÖ;Z;[;o;	;	o;
+;iÖ;i;@	;@;@h;@;;o;	;	@î;@	;@;o;
+;iÖ;i;iÖ;<;=;[ ;>i ;>i ;>i ;>i o;-;.o;	;	o;
+;iä;i;@	;@;o;
+;iã;i;o;	;	o;
+;iä;i;@	;@;o;
+;iã;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["a;60;"" ;iäo;B;$["menu-toggle;"@®;iä;o;	;	o;
+;i;i;0;@®;o;
+;i;i;"@®;7o;;{ ;iä;"@®;iä;@;8["a.menu-toggle;T;iä;[o;9;$["position;:o;	;	o;
+;iå;i;@	;@;o;
+;iå;i;o;;o;;;;"absolute;@;o;	;	o;
+;iå;i;@	;@;o;
+;iå;i;iå;o;	;	o;
+;iå;i;@	;@;@π;@;;o;	;	@¡;@	;@;o;
+;iå;i;iå;<;=;[ ;>i o;9;$["top;:o;	;	o;
+;iç;i;@	;@;o;
+;iç;i;o;;o;;;;"0;@;o;	;	o;
+;iç;i;@	;@;o;
+;iç;i;iç;o;	;	o;
+;iç;i;@	;@;@ ;@;;o;	;	@“;@	;@;o;
+;iç;i
+;iç;<;=;[ ;>i o;9;$["	left;:o;	;	o;
+;ié;i;@	;@;o;
+;ié;i;o;;o;;;;"0;@;o;	;	o;
+;ié;i;@	;@;o;
+;ié;i;ié;o;	;	o;
+;ié;i;@	;@;@€;@;;o;	;	@„;@	;@;o;
+;ié;i;ié;<;=;[ ;>i o;9;$["
+right;:o;	;	o;
+;ié;i;@	;@;o;
+;ié;i;o;;o;;;;"0;@;o;	;	o;
+;ié;i;@	;@;o;
+;ié;i;ié;o;	;	o;
+;ié;i;@	;@;@Ï;@;;o;	;	@Ù;@	;@;o;
+;ié;i;ié;<;=;[ ;>i o;9;$["display;:o;	;	o;
+;iê;i;@	;@;o;
+;iê;i;o;;o;;;;"	none;@;o;	;	o;
+;iê;i;@	;@;o;
+;iê;i;iê;o;	;	o;
+;iê;i;@	;@;@˝;@;;o;	;	@;@	;@;o;
+;iê;i;iê;<;=;[ ;>i o;9;$["
+width;:o;	;	o;
+;ië;i;@	;@;o;
+;ië;i;o;;o;;;;"	100%;@;o;	;	o;
+;ië;i;@	;@;o;
+;ië;i;ië;o;	;	o;
+;ië;i;@	;@;@;@;;o;	;	@;@	;@;o;
+;ië;i;ië;<;=;[ ;>i o;9;$["line-height;:o;	;	o;
+;ií;i;@	;@;o;
+;ií;i;o;;o;;;;"	50px;@;o;	;	o;
+;ií;i;@	;@;o;
+;ií;i;ií;o;	;	o;
+;ií;i;@	;@;@;@;;o;	;	@';@	;@;o;
+;ií;i;ií;<;=;[ ;>i o;9;$["text-align;:o;	;	o;
+;iî;i;@	;@;o;
+;iî;i;o;;o;;;;"center;@;o;	;	o;
+;iî;i;@	;@;o;
+;iî;i;iî;o;	;	o;
+;iî;i;@	;@;@0;@;;o;	;	@8;@	;@;o;
+;iî;i;iî;<;=;[ ;>i o;9;$["text-decoration;:o;	;	o;
+;iï;i;@	;@;o;
+;iï;i;o;;o;;;;"	none;@;o;	;	o;
+;iï;i;@	;@;o;
+;iï;i;iï;o;	;	o;
+;iï;i;@	;@;@A;@;;o;	;	@I;@	;@;o;
+;iï;i;iï;<;=;[ ;>i o;9;$["font-size;:o;	;	o;
+;ió;i;@	;@;o;
+;ió;i;o;;o;;;;"2em;@;o;	;	o;
+;ió;i;@	;@;o;
+;ió;i;ió;o;	;	o;
+;ió;i;@	;@;@R;@;;o;	;	@Z;@	;@;o;
+;ió;i;ió;<;=;[ ;>i o;9;$["background-color;:o;	;	o;
+;iò;i;@	;@;o;
+;iò;i;o;C;$"	grey;o;	;	o;
+;iò;i;@	;@;o;
+;iò;i;"@;@;iò;D"	grey;o;	;	o;
+;iò;i;@	;@;@c;@;;o;	;	@k;@	;@;o;
+;iò;i;iò;<;=;[ ;>i o;9;$["
+color;:o;	;	o;
+;iô;i;@	;@;o;
+;iô;i;o;;o;;;;"
+WHITE;@;o;	;	o;
+;iô;i;@	;@;o;
+;iô;i;iô;o;	;	o;
+;iô;i;@	;@;@t;@;;o;	;	@|;@	;@;o;
+;iô;i;iô;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;iú;i;@	;@;o;
+;iù;i;o;	;	o;
+;iú;i;@	;@;o;
+;iù;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["nav;60;"" ;iú;o;	;	o;
+;i;i;0;@ê;o;
+;i;i	;"@ê;7o;;{ ;iú;"@ê;iú;@;8["nav;T;iú;[o;9;$["
+float;:o;	;	o;
+;iû;i;@	;@;o;
+;iû;i;o;;o;;;;"
+right;@;o;	;	o;
+;iû;i;@	;@;o;
+;iû;i;iû;o;	;	o;
+;iû;i;@	;@;@û;@;;o;	;	@¶;@	;@;o;
+;iû;i;iû;<;=;[ ;>i o;9;$["display;:o;	;	o;
+;iü;i;@	;@;o;
+;iü;i;o;;o;;;;"inline-block;@;o;	;	o;
+;iü;i;@	;@;o;
+;iü;i;iü;o;	;	o;
+;iü;i;@	;@;@Ø;@;;o;	;	@∑;@	;@;o;
+;iü;i;iü;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;i¢;i;@	;@;o;
+;i£;i;o;	;	o;
+;i¢;i;@	;@;o;
+;i£;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["ul;60;"" ;i¢o;B;$["nav;"@À;i¢;o;	;	o;
+;i;i;0;@À;o;
+;i;i;"@À;7o;;{ ;i¢;"@À;i¢;@;8["ul.nav;T;i¢;[o;9;$["list-style-type;:o;	;	o;
+;i§;i;@	;@;o;
+;i§;i;o;;o;;;;"	none;@;o;	;	o;
+;i§;i;@	;@;o;
+;i§;i;i§;o;	;	o;
+;i§;i;@	;@;@‹;@;;o;	;	@‰;@	;@;o;
+;i§;i;i§;<;=;[ ;>i o;9;$["margin;:o;	;	o;
+;i•;i;@	;@;o;
+;i•;i;o;;o;;;;"0;@;o;	;	o;
+;i•;i;@	;@;o;
+;i•;i;i•;o;	;	o;
+;i•;i;@	;@;@Ì;@;;o;	;	@ı;@	;@;o;
+;i•;i;i•;<;=;[ ;>i o;-;.o;	;	o;
+;iß;i;@	;@;o;
+;i®;i;o;	;	o;
+;iß;i;@	;@;o;
+;i®;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["li;60;"" ;iß;o;	;	o;
+;i;i;0;@	;o;
+;i;i;"@	;7o;;{ ;iß;"@	;iß;@;8["li;T;iß;[
+o;9;$["display;:o;	;	o;
+;i©;i;@	;@;o;
+;i©;i;o;;o;;;;"inline-block;@;o;	;	o;
+;i©;i;@	;@;o;
+;i©;i;i©;o;	;	o;
+;i©;i
+;@	;@;@;@;;o;	;	@;@	;@;o;
+;i©;i;i©;<;=;[ ;>i o;9;$["padding;:o;	;	o;
+;i´;i;@	;@;o;
+;i´;i;o;;o;;;;"0 10px;@;o;	;	o;
+;i´;i;@	;@;o;
+;i´;i;i´;o;	;	o;
+;i´;i
+;@	;@;@(;@;;o;	;	@0;@	;@;o;
+;i´;i;i´;<;=;[ ;>i o;9;$["min-height;:o;	;	o;
+;i¨;i;@	;@;o;
+;i¨;i;o;;o;;;;"	50px;@;o;	;	o;
+;i¨;i;@	;@;o;
+;i¨;i;i¨;o;	;	o;
+;i¨;i
+;@	;@;@9;@;;o;	;	@A;@	;@;o;
+;i¨;i;i¨;<;=;[ ;>i o;-;.o;	;	o;
+;iÆ;i
+;@	;@;o;
+;iØ;i
+;o;	;	o;
+;iÆ;i
+;@	;@;o;
+;iØ;i
+;/o;0;1[o;2;1[o;3;40;1[o;E;"" ;iÆo;F
+;G;H;$["
+hover;"@S;iÆ;I0;o;	;	o;
+;i;i;0;@S;o;
+;i;i;"@S;7o;;{ ;iÆ;"@S;iÆ;@;8["&:hover;T;iÆ;[o;9;$["background-color;:o;	;	o;
+;i∞;i;@	;@;o;
+;i∞;i/;o;P;$"darken;Q0;o;	;	o;
+;i∞;i;@	;@;o;
+;i∞;i/;"@;@;i∞;Ro;S;TIC;U{ ;V[ ;W{ ;X@k;Y[o;C;$"	grey;o;	;	o;
+;i∞;i%;@	;@;o;
+;i∞;i*;"@;@;i∞;D"	greyo;	;o;L
+;M"10;N@ ;i;O[ ;@;o;	;	o;
+;i∞;i,;@	;@;o;
+;i∞;i.;"@;i∞;o;	;	o;
+;i∞;i;@	;@;@d;@;;o;	;	@};@	;@;o;
+;i∞;i;i∞;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;i≥;i
+;@	;@;o;
+;i¥;i
+;o;	;	o;
+;i≥;i
+;@	;@;o;
+;i¥;i
+;/o;0;1[o;2;1[o;3;40;1[o;?	;$["a;60;"" ;i≥;o;	;	o;
+;i;i;0;@ë;o;
+;i;i;"@ë;7o;;{ ;i≥;"@ë;i≥;@;8["a;T;i≥;[
+o;9;$["display;:o;	;	o;
+;iµ;i;@	;@;o;
+;iµ;i;o;;o;;;;"
+block;@;o;	;	o;
+;iµ;i;@	;@;o;
+;iµ;i;iµ;o;	;	o;
+;iµ;i;@	;@;@ü;@;;o;	;	@ß;@	;@;o;
+;iµ;i;iµ;<;=;[ ;>i o;9;$["
+color;:o;	;	o;
+;i∑;i;@	;@;o;
+;i∑;i;o;;o;;;;"	#FFF;@;o;	;	o;
+;i∑;i;@	;@;o;
+;i∑;i;i∑;o;	;	o;
+;i∑;i;@	;@;@∞;@;;o;	;	@∏;@	;@;o;
+;i∑;i;i∑;<;=;[ ;>i o;9;$["text-decoration;:o;	;	o;
+;i∏;i;@	;@;o;
+;i∏;i!;o;;o;;;;"	none;@;o;	;	o;
+;i∏;i;@	;@;o;
+;i∏;i!;i∏;o;	;	o;
+;i∏;i;@	;@;@¡;@;;o;	;	@…;@	;@;o;
+;i∏;i;i∏;<;=;[ ;>i o;9;$["line-height;:o;	;	o;
+;iπ;i;@	;@;o;
+;iπ;i;o;;o;;;;"	50px;@;o;	;	o;
+;iπ;i;@	;@;o;
+;iπ;i;iπ;o;	;	o;
+;iπ;i;@	;@;@“;@;;o;	;	@⁄;@	;@;o;
+;iπ;i;iπ;<;=;[ ;>i o;9;$["-webkit-font-smoothing;:o;	;	o;
+;iª;i$;@	;@;o;
+;iª;i/;o;;o;;;;"antialiased;@;o;	;	o;
+;iª;i$;@	;@;o;
+;iª;i/;iª;o;	;	o;
+;iª;i;@	;@;@„;@;;o;	;	@Î;@	;@;o;
+;iª;i";iª;<;=;[ ;>i ;>i ;>i ;>i o;-;.o;	;	o;
+;i¿;i;@	;@;o;
+;i¡;i;o;	;	o;
+;i¿;i;@	;@;o;
+;i¡;i;/o;0;1[o;2;1[o;3;40;1[o;B;$["main_content;"" ;i¿;o;	;	o;
+;i;i;0;@ˇ;o;
+;i;i;"@ˇ;7o;;{ ;i¿;"@ˇ;i¿;@;8[".main_content;T;i¿;[o;9;$["position;:o;	;	o;
+;i¬;i;@	;@;o;
+;i¬;i;o;;o;;;;"relative;@;o;	;	o;
+;i¬;i;@	;@;o;
+;i¬;i;i¬;o;	;	o;
+;i¬;i;@	;@;@;@;;o;	;	@;@	;@;o;
+;i¬;i;i¬;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;i≈;i;@	;@;o;
+;i∆;i;o;	;	o;
+;i≈;i;@	;@;o;
+;i∆;i;/o;0;1[o;2;1[o;3;40;1[o;B;$["articles;"" ;i≈;o;	;	o;
+;i;i;0;@);o;
+;i;i;"@);7o;;{ ;i≈;"@);i≈;@;8[".articles;T;i≈;[o;9;$["
+float;:o;	;	o;
+;i«;i;@	;@;o;
+;i«;i;o;;o;;;;"	left;@;o;	;	o;
+;i«;i;@	;@;o;
+;i«;i;i«;o;	;	o;
+;i«;i;@	;@;@7;@;;o;	;	@?;@	;@;o;
+;i«;i;i«;<;=;[ ;>i o;9;$["
+width;:o;	;	o;
+;i»;i;@	;@;o;
+;i»;i;o;;o;;;;"70%;@;o;	;	o;
+;i»;i;@	;@;o;
+;i»;i;i»;o;	;	o;
+;i»;i;@	;@;@H;@;;o;	;	@P;@	;@;o;
+;i»;i;i»;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;iÀ;i;@	;@;o;
+;iÃ;i;o;	;	o;
+;iÀ;i;@	;@;o;
+;iÃ;i;/o;0;1[o;2;1[o;3;40;1[o;B;$["sidebar;"" ;iÀ;o;	;	o;
+;i;i;0;@d;o;
+;i;i;"@d;7o;;{ ;iÀ;"@d;iÀ;@;8[".sidebar;T;iÀ;[	o;9;$["
+float;:o;	;	o;
+;iÕ;i;@	;@;o;
+;iÕ;i;o;;o;;;;"
+right;@;o;	;	o;
+;iÕ;i;@	;@;o;
+;iÕ;i;iÕ;o;	;	o;
+;iÕ;i;@	;@;@r;@;;o;	;	@z;@	;@;o;
+;iÕ;i;iÕ;<;=;[ ;>i o;9;$["
+width;:o;	;	o;
+;iœ;i;@	;@;o;
+;iœ;i;o;;o;;;;"25%;@;o;	;	o;
+;iœ;i;@	;@;o;
+;iœ;i;iœ;o;	;	o;
+;iœ;i;@	;@;@É;@;;o;	;	@ã;@	;@;o;
+;iœ;i;iœ;<;=;[ ;>i o;-;.o;	;	o;
+;i—;i;@	;@;o;
+;i“;i;o;	;	o;
+;i—;i;@	;@;o;
+;i“;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["h3;60;"" ;i—;o;	;	o;
+;i;i;0;@ü;o;
+;i;i;"@ü;7o;;{ ;i—;"@ü;i—;@;8["h3;T;i—;[o;9;$["font-family;:o;	;	o;
+;i”;i;@	;@;o;
+;i”;i8;o;;o;;;;"''Nothing You Could Do', sans-serif;@;o;	;	o;
+;i”;i;@	;@;o;
+;i”;i8;i”;o;	;	o;
+;i”;i	;@	;@;@≠;@;;o;	;	@µ;@	;@;o;
+;i”;i;i”;<;=;[ ;>i o;9;$["font-size;:o;	;	o;
+;i‘;i;@	;@;o;
+;i‘;i;o;;o;;;;"
+1.5em;@;o;	;	o;
+;i‘;i;@	;@;o;
+;i‘;i;i‘;o;	;	o;
+;i‘;i	;@	;@;@æ;@;;o;	;	@∆;@	;@;o;
+;i‘;i;i‘;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;i◊;i;@	;@;o;
+;iÿ;i;o;	;	o;
+;i◊;i;@	;@;o;
+;iÿ;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["p;60;"" ;i◊;o;	;	o;
+;i;i;0;@⁄;o;
+;i;i;"@⁄;7o;;{ ;i◊;"@⁄;i◊;@;8["p;T;i◊;[o;-;.o;	;	o;
+;i⁄;i;@	;@;o;
+;i€;i;o;	;	o;
+;i⁄;i;@	;@;o;
+;i€;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["img;60;"" ;i⁄;o;	;	o;
+;i;i;0;@Û;o;
+;i;i	;"@Û;7o;;{ ;i⁄;"@Û;i⁄;@;8["img;T;i⁄;[o;9;$["
+float;:o;	;	o;
+;i‹;i;@	;@;o;
+;i‹;i;o;;o;;;;"	left;@;o;	;	o;
+;i‹;i;@	;@;o;
+;i‹;i;i‹;o;	;	o;
+;i‹;i;@	;@;@	;@;;o;	;	@		;@	;@;o;
+;i‹;i;i‹;<;=;[ ;>i o;9;$["margin-right;:o;	;	o;
+;i›;i;@	;@;o;
+;i›;i;o;;o;;;;"5px;@;o;	;	o;
+;i›;i;@	;@;o;
+;i›;i;i›;o;	;	o;
+;i›;i;@	;@;@	;@;;o;	;	@	;@	;@;o;
+;i›;i;i›;<;=;[ ;>i o;9;$["border-radius;:o;	;	o;
+;iﬂ;i;@	;@;o;
+;iﬂ;i;o;;o;;;;"50%;@;o;	;	o;
+;iﬂ;i;@	;@;o;
+;iﬂ;i;iﬂ;o;	;	o;
+;iﬂ;i;@	;@;@#	;@;;o;	;	@+	;@	;@;o;
+;iﬂ;i;iﬂ;<;=;[ ;>i o;9;$["opacity;:o;	;	o;
+;i‡;i;@	;@;o;
+;i‡;i;o;;o;;;;"1;@;o;	;	o;
+;i‡;i;@	;@;o;
+;i‡;i;i‡;o;	;	o;
+;i‡;i;@	;@;@4	;@;;o;	;	@<	;@	;@;o;
+;i‡;i;i‡;<;=;[ ;>i o;9;$["-webkit-transition;:o;	;	o;
+;i‚;i";@	;@;o;
+;i‚;i?;o;;o;;;;""border-radius .5s ease-in-out;@;o;	;	o;
+;i‚;i";@	;@;o;
+;i‚;i?;i‚;o;	;	o;
+;i‚;i;@	;@;@E	;@;;o;	;	@M	;@	;@;o;
+;i‚;i ;i‚;<;=;[ ;>i o;-;.o;	;	o;
+;i‰;i;@	;@;o;
+;iÂ;i;o;	;	o;
+;i‰;i;@	;@;o;
+;iÂ;i;/o;0;1[o;2;1[o;3;40;1[o;E;"" ;i‰o;F
+;G;H;$["
+hover;"@_	;i‰;I0;o;	;	o;
+;i;i;0;@_	;o;
+;i;i;"@_	;7o;;{ ;i‰;"@_	;i‰;@;8["&:hover;T;i‰;[o;9;$["border-radius;:o;	;	o;
+;iÊ;i;@	;@;o;
+;iÊ;i;o;;o;;;;"0;@;o;	;	o;
+;iÊ;i;@	;@;o;
+;iÊ;i;iÊ;o;	;	o;
+;iÊ;i;@	;@;@p	;@;;o;	;	@x	;@	;@;o;
+;iÊ;i;iÊ;<;=;[ ;>i o;9;$["opacity;:o;	;	o;
+;iÁ;i;@	;@;o;
+;iÁ;i;o;;o;;;;".8;@;o;	;	o;
+;iÁ;i;@	;@;o;
+;iÁ;i;iÁ;o;	;	o;
+;iÁ;i;@	;@;@Å	;@;;o;	;	@â	;@	;@;o;
+;iÁ;i;iÁ;<;=;[ ;>i ;>i ;>i ;>i ;>i o;-;.o;	;	o;
+;iÓ;i;@	;@;o;
+;iÔ;i;o;	;	o;
+;iÓ;i;@	;@;o;
+;iÔ;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["div;60;"" ;iÓo;B;$["widget;"@ù	;iÓ;o;	;	o;
+;i;i;0;@ù	;o;
+;i;i;"@ù	;7o;;{ ;iÓ;"@ù	;iÓ;@;8["div.widget;T;iÓ;[o;-;.o;	;	o;
+;iÒ;i;@	;@;o;
+;iÚ;i;o;	;	o;
+;iÒ;i;@	;@;o;
+;iÚ;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["h4;60;"" ;iÒ;o;	;	o;
+;i;i;0;@π	;o;
+;i;i;"@π	;7o;;{ ;iÒ;"@π	;iÒ;@;8["h4;T;iÒ;[o;9;$["font-family;:o;	;	o;
+;iÛ;i;@	;@;o;
+;iÛ;i7;o;;o;;;;"''Nothing You Could Do', sans-serif;@;o;	;	o;
+;iÛ;i;@	;@;o;
+;iÛ;i7;iÛ;o;	;	o;
+;iÛ;i;@	;@;@«	;@;;o;	;	@œ	;@	;@;o;
+;iÛ;i;iÛ;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;iˆ;i;@	;@;o;
+;i˜;i;o;	;	o;
+;iˆ;i;@	;@;o;
+;i˜;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["ul;60;"" ;iˆ;o;	;	o;
+;i;i;0;@„	;o;
+;i;i;"@„	;7o;;{ ;iˆ;"@„	;iˆ;@;8["ul;T;iˆ;[o;9;$["list-style-type;:o;	;	o;
+;i¯;i;@	;@;o;
+;i¯;i;o;;o;;;;"	none;@;o;	;	o;
+;i¯;i;@	;@;o;
+;i¯;i;i¯;o;	;	o;
+;i¯;i;@	;@;@Ò	;@;;o;	;	@˘	;@	;@;o;
+;i¯;i;i¯;<;=;[ ;>i o;9;$["padding-left;:o;	;	o;
+;i˘;i;@	;@;o;
+;i˘;i;o;;o;;;;"0;@;o;	;	o;
+;i˘;i;@	;@;o;
+;i˘;i;i˘;o;	;	o;
+;i˘;i;@	;@;@
+;@;;o;	;	@
+
+;@	;@;o;
+;i˘;i;i˘;<;=;[ ;>i o;-;.o;	;	o;
+;i˚;i;@	;@;o;
+;i¸;i;o;	;	o;
+;i˚;i;@	;@;o;
+;i¸;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["li;60;"" ;i˚;o;	;	o;
+;i;i;0;@
+;o;
+;i;i;"@
+;7o;;{ ;i˚;"@
+;i˚;@;8["li;T;i˚;[	o;9;$["box-shadow;:o;	;	o;
+;i˝;i;@	;@;o;
+;i˝;i*;o;J;K[
+o;	;o;L
+;M"0;N@ ;i ;O[ ;@;o;	;	o;
+;i˝;i;@	;@;o;
+;i˝;i;"@;i˝o;	;o;L
+;M"3px;N[ ;i;O["px;@;o;	;	o;
+;i˝;i;@	;@;o;
+;i˝;i;"@;i˝o;	;o;L
+;M"3px;N[ ;i;O["px;@;o;	;	o;
+;i˝;i;@	;@;o;
+;i˝;i;"@;i˝o;	;o;L
+;M"	-4px;N[ ;i˜;O["px;@;o;	;	o;
+;i˝;i ;@	;@;o;
+;i˝;i$;"@;i˝o;C;$"	grey;o;	;	o;
+;i˝;i%;@	;@;o;
+;i˝;i*;"@;@;i˝;D"	grey;o;	;	o;
+;i˝;i;@	;@;o;
+;i˝;i*;"@;@;i˝;Z;[;o;	;	o;
+;i˝;i
+;@	;@;@,
+;@;;o;	;	@[
+;@	;@;o;
+;i˝;i;i˝;<;=;[ ;>i o;9;$["overflow;:o;	;	o;
+;i˛;i;@	;@;o;
+;i˛;i;o;;o;;;;"hidden;@;o;	;	o;
+;i˛;i;@	;@;o;
+;i˛;i;i˛;o;	;	o;
+;i˛;i
+;@	;@;@d
+;@;;o;	;	@l
+;@	;@;o;
+;i˛;i;i˛;<;=;[ ;>i o;-;.o;	;	o;
+;i ;i
+;@	;@;o;
+;i;i
+;o;	;	o;
+;i ;i
+;@	;@;o;
+;i;i
+;/o;0;1[o;2;1[o;3;40;1[o;E;"" ;i o;F
+;G;H;$["first-of-type;"@~
+;i ;I0;o;	;	o;
+;i;i;0;@~
+;o;
+;i;i;"@~
+;7o;;{ ;i ;"@~
+;i ;@;8["&:first-of-type;T;i ;[o;9;$["border-top;:o;	;	o;
+;i;i;@	;@;o;
+;i;i3;o;J;K[o;	;o;L
+;M"1px;N[ ;i;O["px;@;o;	;	o;
+;i;i;@	;@;o;
+;i;i;"@;io;	;o;;;;"
+solid;@;o;	;	o;
+;i;i;@	;@;o;
+;i;i ;"@;io;P;$"lighten;Q0;o;	;	o;
+;i;i!;@	;@;o;
+;i;i3;"@;@;i;Ro;S;TIC;U{ ;V[ ;W{ ;X@ß
+;Y[o;C;$"	grey;o;	;	o;
+;i;i);@	;@;o;
+;i;i.;"@;@;i;D"	greyo;	;o;L
+;M"60;N@ ;iA;O[ ;@;o;	;	o;
+;i;i0;@	;@;o;
+;i;i2;"@;i;o;	;	o;
+;i;i;@	;@;o;
+;i;i3;"@;@;i;Z;[;o;	;	o;
+;i;i;@	;@;@è
+;@;;o;	;	@º
+;@	;@;o;
+;i;i;i;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;i;i
+;@	;@;o;
+;i;i
+;o;	;	o;
+;i;i
+;@	;@;o;
+;i;i
+;/o;0;1[o;2;1[o;3;40;1[o;?	;$["a;60;"" ;i;o;	;	o;
+;i;i;0;@–
+;o;
+;i;i;"@–
+;7o;;{ ;i;"@–
+;i;@;8["a;T;i;[o;9;$["display;:o;	;	o;
+;i;i;@	;@;o;
+;i;i;o;;o;;;;"
+block;@;o;	;	o;
+;i;i;@	;@;o;
+;i;i;i;o;	;	o;
+;i;i;@	;@;@ﬁ
+;@;;o;	;	@Ê
+;@	;@;o;
+;i;i;i;<;=;[ ;>i o;9;$["
+width;:o;	;	o;
+;i;i;@	;@;o;
+;i;i;o;;o;;;;"	100%;@;o;	;	o;
+;i;i;@	;@;o;
+;i;i;i;o;	;	o;
+;i;i;@	;@;@Ô
+;@;;o;	;	@˜
+;@	;@;o;
+;i;i;i;<;=;[ ;>i o;9;$["padding;:o;	;	o;
+;i
+;i;@	;@;o;
+;i
+;i;o;;o;;;;"10px 0px;@;o;	;	o;
+;i
+;i;@	;@;o;
+;i
+;i;i
+;o;	;	o;
+;i
+;i;@	;@;@ ;@;;o;	;	@;@	;@;o;
+;i
+;i;i
+;<;=;[ ;>i o;9;$["text-decoration;:o;	;	o;
+;i;i;@	;@;o;
+;i;i!;o;;o;;;;"	none;@;o;	;	o;
+;i;i;@	;@;o;
+;i;i!;i;o;	;	o;
+;i;i;@	;@;@;@;;o;	;	@;@	;@;o;
+;i;i;i;<;=;[ ;>i o;9;$["-webkit-transition;:o;	;	o;
+;i;i ;@	;@;o;
+;i;i3;o;;o;;;;"all .2s ease-in-out;@;o;	;	o;
+;i;i ;@	;@;o;
+;i;i3;i;o;	;	o;
+;i;i;@	;@;@";@;;o;	;	@*;@	;@;o;
+;i;i;i;<;=;[ ;>i o;-;.o;	;	o;
+;i;i;@	;@;o;
+;i;i;o;	;	o;
+;i;i;@	;@;o;
+;i;i;/o;0;1[o;2;1[o;3;40;1[o;E;"" ;io;F
+;G;H;$["
+hover;"@<;i;I0;o;	;	o;
+;i;i;0;@<;o;
+;i;i;"@<;7o;;{ ;i;"@<;i;@;8["&:hover;T;i;[o;9;$["padding-left;:o;	;	o;
+;i;i;@	;@;o;
+;i;i ;o;;o;;;;"	40px;@;o;	;	o;
+;i;i;@	;@;o;
+;i;i ;i;o;	;	o;
+;i;i;@	;@;@M;@;;o;	;	@U;@	;@;o;
+;i;i;i;<;=;[ ;>i ;>i ;>i ;>i ;>i ;>i o;-;.o;	;	o;
+;i;i;@	;@;o;
+;i;i;o;	;	o;
+;i;i;@	;@;o;
+;i;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["ul;60;"" ;io;B;$["social;"@i;i;o;	;	o;
+;i;i;0;@i;o;
+;i;i;"@i;7o;;{ ;i;"@i;i;@;8["ul.social;T;i;[
+o;9;$["display;:o;	;	o;
+;i;i;@	;@;o;
+;i;i;o;;o;;;;"
+table;@;o;	;	o;
+;i;i;@	;@;o;
+;i;i;i;o;	;	o;
+;i;i;@	;@;@z;@;;o;	;	@Ç;@	;@;o;
+;i;i;i;<;=;[ ;>i o;9;$["list-style-type;:o;	;	o;
+;i;i;@	;@;o;
+;i;i;o;;o;;;;"	none;@;o;	;	o;
+;i;i;@	;@;o;
+;i;i;i;o;	;	o;
+;i;i;@	;@;@ã;@;;o;	;	@ì;@	;@;o;
+;i;i;i;<;=;[ ;>i o;9;$["margin-left;:o;	;	o;
+;i;i;@	;@;o;
+;i;i;o;;o;;;;"
+-40px;@;o;	;	o;
+;i;i;@	;@;o;
+;i;i;i;o;	;	o;
+;i;i;@	;@;@ú;@;;o;	;	@§;@	;@;o;
+;i;i;i;<;=;[ ;>i o;9;$["
+width;:o;	;	o;
+;i ;i;@	;@;o;
+;i ;i;o;;o;;;;"	100%;@;o;	;	o;
+;i ;i;@	;@;o;
+;i ;i;i ;o;	;	o;
+;i ;i;@	;@;@≠;@;;o;	;	@µ;@	;@;o;
+;i ;i;i ;<;=;[ ;>i o;-;.o;	;	o;
+;i!;i;@	;@;o;
+;i";i;o;	;	o;
+;i!;i;@	;@;o;
+;i";i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["li;60;"" ;i!;o;	;	o;
+;i;i;0;@…;o;
+;i;i;"@…;7o;;{ ;i!;"@…;i!;@;8["li;T;i!;[o;9;$["display;:o;	;	o;
+;i#;i;@	;@;o;
+;i#;i;o;;o;;;;"table-cell;@;o;	;	o;
+;i#;i;@	;@;o;
+;i#;i;i#;o;	;	o;
+;i#;i;@	;@;@◊;@;;o;	;	@ﬂ;@	;@;o;
+;i#;i;i#;<;=;[ ;>i o;9;$["margin;:o;	;	o;
+;i$;i;@	;@;o;
+;i$;i;o;;o;;;;"	auto;@;o;	;	o;
+;i$;i;@	;@;o;
+;i$;i;i$;o;	;	o;
+;i$;i;@	;@;@Ë;@;;o;	;	@;@	;@;o;
+;i$;i;i$;<;=;[ ;>i o;9;$["text-align;:o;	;	o;
+;i&;i;@	;@;o;
+;i&;i;o;;o;;;;"center;@;o;	;	o;
+;i&;i;@	;@;o;
+;i&;i;i&;o;	;	o;
+;i&;i;@	;@;@˘;@;;o;	;	@;@	;@;o;
+;i&;i;i&;<;=;[ ;>i o;#;$"height;o;	;	o;
+;i(;i	;@	;@;o;
+;i(;i;@;%0;i(;&o;	;o;L
+;M"	50px;N[ ;i7;O["px;@;o;	;	o;
+;i(;i;@	;@;o;
+;i(;i;"@;i(;[ o;9;$["background-color;:o;	;	o;
+;i);i;@	;@;o;
+;i);i/;o;P;$"	rgba;Q0;o;	;	o;
+;i);i;@	;@;o;
+;i);i/;"@;@;i);Ro;S;TIC;U{ ;V[ ;W{ ;X@ ;Y[	o;	;o;L
+;M"218;N@ ;i⁄;O[ ;@;o;	;	o;
+;i);i;@	;@;o;
+;i);i";"@;i)o;	;o;L
+;M"207;N@ ;iœ;O[ ;@;o;	;	o;
+;i);i#;@	;@;o;
+;i);i&;"@;i)o;	;o;L
+;M"191;N@ ;iø;O[ ;@;o;	;	o;
+;i);i';@	;@;o;
+;i);i*;"@;i)o;	;o;L
+;M"0.5;N@ ;f0.5;O[ ;@;o;	;	o;
+;i);i,;@	;@;o;
+;i);i.;"@;i);o;	;	o;
+;i);i;@	;@;@;@;;o;	;	@B;@	;@;o;
+;i);i;i);<;=;[ ;>i o;9;$["height;:o;	;	o;
+;i+;i;@	;@;o;
+;i+;i;o;C;$"height;o;	;	o;
+;i+;i;@	;@;o;
+;i+;i;"@;@;i+;D"height;o;	;	o;
+;i+;i;@	;@;@K;@;;o;	;	@S;@	;@;o;
+;i+;i;i+;<;=;[ ;>i o;9;$["border-left;:o;	;	o;
+;i-;i;@	;@;o;
+;i-;i1;o;J;K[o;	;o;L
+;M"1px;N[ ;i;O["px;@;o;	;	o;
+;i-;i;@	;@;o;
+;i-;i;"@;i-o;	;o;;;;"
+solid;@;o;	;	o;
+;i-;i;@	;@;o;
+;i-;i;"@;i-o;P;$"darken;Q0;o;	;	o;
+;i-;i;@	;@;o;
+;i-;i1;"@;@;i-;Ro;S;TIC;U{ ;V[ ;W{ ;X@t;Y[o;	;o;';0;({	;)i⁄;*i;+iœ;,iø;@;o;	;	o;
+;i-;i&;@	;@;o;
+;i-;i-;"@;i-o;	;o;L
+;M"1;N@ ;i;O[ ;@;o;	;	o;
+;i-;i/;@	;@;o;
+;i-;i0;"@;i-;o;	;	o;
+;i-;i;@	;@;o;
+;i-;i1;"@;@;i-;Z;[;o;	;	o;
+;i-;i;@	;@;@\;@;;o;	;	@â;@	;@;o;
+;i-;i;i-;<;=;[ ;>i o;9;$["-webkit-transition;:o;	;	o;
+;i/;i;@	;@;o;
+;i/;i*;o;;o;;;;"all .2s linear;@;o;	;	o;
+;i/;i;@	;@;o;
+;i/;i*;i/;o;	;	o;
+;i/;i;@	;@;@í;@;;o;	;	@ö;@	;@;o;
+;i/;i;i/;<;=;[ ;>i o;-;.o;	;	o;
+;i1;i;@	;@;o;
+;i2;i;o;	;	o;
+;i1;i;@	;@;o;
+;i2;i;/o;0;1[o;2;1[o;3;40;1[o;E;"" ;i1o;F
+;G;H;$["
+hover;"@¨;i1;I0;o;	;	o;
+;i;i;0;@¨;o;
+;i;i;"@¨;7o;;{ ;i1o;2;1[o;3;40;1[o;E;"@¨;i1o;F
+;G;H;$["active;"@¨;i1;I0;o;	;	o;
+;i;i;0;@¨;o;
+;i;i;"@¨;7o;;{ ;i1;"@¨;i1;@;8["&:hover, &:active;T;i1;[o;9;$["background-color;:o;	;	o;
+;i3;i;@	;@;o;
+;i4;i;o;P;$"	rgba;Q0;o;	;	o;
+;i3;i;@	;@;o;
+;i3;i/;"@;@;i3;Ro;S;TIC;U{ ;V[ ;W{ ;X@—;Y[	o;	;o;L
+;M"218;N@ ;i⁄;O[ ;@;o;	;	o;
+;i3;i ;@	;@;o;
+;i3;i#;"@;i3o;	;o;L
+;M"207;N@ ;iœ;O[ ;@;o;	;	o;
+;i3;i$;@	;@;o;
+;i3;i';"@;i3o;	;o;L
+;M"191;N@ ;iø;O[ ;@;o;	;	o;
+;i3;i(;@	;@;o;
+;i3;i+;"@;i3o;	;o;L
+;M"1;N@ ;i;O[ ;@;o;	;	o;
+;i3;i-;@	;@;o;
+;i3;i.;"@;i3;o;	;	o;
+;i3;i	;@	;@;@ ;@;;o;	;	@Ú;@	;@;o;
+;i3;i;i3;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;i6;i;@	;@;o;
+;i7;i;o;	;	o;
+;i6;i;@	;@;o;
+;i7;i;/o;0;1[o;2;1[o;3;40;1[o;E;"" ;i6o;F
+;G;H;$["first-of-type;"@;i6;I0;o;	;	o;
+;i;i;0;@;o;
+;i;i;"@;7o;;{ ;i6;"@;i6;@;8["&:first-of-type;T;i6;[o;9;$["border-left;:o;	;	o;
+;i8;i;@	;@;o;
+;i8;i;o;;o;;;;"	none;@;o;	;	o;
+;i8;i;@	;@;o;
+;i8;i;i8;o;	;	o;
+;i8;i	;@	;@;@;@;;o;	;	@;@	;@;o;
+;i8;i;i8;<;=;[ ;>i o;9;$["border-top-left-radius;:o;	;	o;
+;i:;i!;@	;@;o;
+;i:;i$;o;;o;;;;"5px;@;o;	;	o;
+;i:;i!;@	;@;o;
+;i:;i$;i:;o;	;	o;
+;i:;i	;@	;@;@&;@;;o;	;	@.;@	;@;o;
+;i:;i;i:;<;=;[ ;>i o;9;$["border-bottom-left-radius;:o;	;	o;
+;i;;i$;@	;@;o;
+;i;;i';o;;o;;;;"5px;@;o;	;	o;
+;i;;i$;@	;@;o;
+;i;;i';i;;o;	;	o;
+;i;;i	;@	;@;@7;@;;o;	;	@?;@	;@;o;
+;i;;i";i;;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;i>;i;@	;@;o;
+;i?;i;o;	;	o;
+;i>;i;@	;@;o;
+;i?;i;/o;0;1[o;2;1[o;3;40;1[o;E;"" ;i>o;F
+;G;H;$["last-of-type;"@Q;i>;I0;o;	;	o;
+;i;i;0;@Q;o;
+;i;i;"@Q;7o;;{ ;i>;"@Q;i>;@;8["&:last-of-type;T;i>;[o;9;$["border-top-right-radius;:o;	;	o;
+;i@;i";@	;@;o;
+;i@;i%;o;;o;;;;"5px;@;o;	;	o;
+;i@;i";@	;@;o;
+;i@;i%;i@;o;	;	o;
+;i@;i	;@	;@;@b;@;;o;	;	@j;@	;@;o;
+;i@;i ;i@;<;=;[ ;>i o;9;$["border-bottom-right-radius;:o;	;	o;
+;iA;i%;@	;@;o;
+;iA;i(;o;;o;;;;"5px;@;o;	;	o;
+;iA;i%;@	;@;o;
+;iA;i(;iA;o;	;	o;
+;iA;i	;@	;@;@s;@;;o;	;	@{;@	;@;o;
+;iA;i#;iA;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;iD;i;@	;@;o;
+;iE;i;o;	;	o;
+;iD;i;@	;@;o;
+;iE;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["a;60;"" ;iD;o;	;	o;
+;i;i;0;@è;o;
+;i;i;"@è;7o;;{ ;iD;"@è;iD;@;8["a;T;iD;[o;9;$["display;:o;	;	o;
+;iF;i;@	;@;o;
+;iF;i;o;;o;;;;"
+block;@;o;	;	o;
+;iF;i;@	;@;o;
+;iF;i;iF;o;	;	o;
+;iF;i	;@	;@;@ù;@;;o;	;	@•;@	;@;o;
+;iF;i;iF;<;=;[ ;>i o;9;$["height;:o;	;	o;
+;iG;i;@	;@;o;
+;iG;i;o;;o;;;;"	100%;@;o;	;	o;
+;iG;i;@	;@;o;
+;iG;i;iG;o;	;	o;
+;iG;i	;@	;@;@Æ;@;;o;	;	@∂;@	;@;o;
+;iG;i;iG;<;=;[ ;>i o;9;$["line-height;:o;	;	o;
+;iH;i;@	;@;o;
+;iH;i;o;C;$"height;o;	;	o;
+;iH;i;@	;@;o;
+;iH;i;"@;@;iH;D"height;o;	;	o;
+;iH;i	;@	;@;@ø;@;;o;	;	@«;@	;@;o;
+;iH;i;iH;<;=;[ ;>i o;9;$["
+color;:o;	;	o;
+;iI;i;@	;@;o;
+;iI;i";o;P;$"lighten;Q0;o;	;	o;
+;iI;i;@	;@;o;
+;iI;i";"@;@;iI;Ro;S;TIC;U{ ;V[ ;W{ ;X@◊;Y[o;C;$"	grey;o;	;	o;
+;iI;i;@	;@;o;
+;iI;i;"@;@;iI;D"	greyo;	;o;L
+;M"20;N@ ;i;O[ ;@;o;	;	o;
+;iI;i;@	;@;o;
+;iI;i!;"@;iI;o;	;	o;
+;iI;i	;@	;@;@–;@;;o;	;	@È;@	;@;o;
+;iI;i;iI;<;=;[ ;>i o;9;$["font-size;:o;	;	o;
+;iJ;i;@	;@;o;
+;iJ;i;o;;o;;;;"
+1.3em;@;o;	;	o;
+;iJ;i;@	;@;o;
+;iJ;i;iJ;o;	;	o;
+;iJ;i	;@	;@;@Ú;@;;o;	;	@˙;@	;@;o;
+;iJ;i;iJ;<;=;[ ;>i o;9;$["text-decoration;:o;	;	o;
+;iK;i;@	;@;o;
+;iK;i;o;;o;;;;"	none;@;o;	;	o;
+;iK;i;@	;@;o;
+;iK;i;iK;o;	;	o;
+;iK;i	;@	;@;@;@;;o;	;	@;@	;@;o;
+;iK;i;iK;<;=;[ ;>i o;-;.o;	;	o;
+;iM;i	;@	;@;o;
+;iN;i	;o;	;	o;
+;iM;i	;@	;@;o;
+;iN;i	;/o;0;1[o;2;1[o;3;40;1[o;E;"" ;iMo;F
+;G;H;$["
+hover;"@;iM;I0;o;	;	o;
+;i;i;0;@;o;
+;i;i;"@;7o;;{ ;iMo;3;40;1[o;?	;$["i;60;"@;iM;o;	;	o;
+;i;i;0;@;o;
+;i;i;"@;7o;;{ ;iM;"@;iM;@;8["&:hover i;T;iM;[o;9;$["-webkit-transition;:o;	;	o;
+;iO;i;@	;@;o;
+;iO;i1;o;;o;;;;"all .2s ease-in-out;@;o;	;	o;
+;iO;i;@	;@;o;
+;iO;i1;iO;o;	;	o;
+;iO;i
+;@	;@;@8;@;;o;	;	@@;@	;@;o;
+;iO;i;iO;<;=;[ ;>i ;>i ;>i ;>i ;>i o;-;.o;	;	o;
+;iV;i;@	;@;o;
+;iW;i;o;	;	o;
+;iV;i;@	;@;o;
+;iW;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["article;60;"" ;iV;o;	;	o;
+;i;i;0;@T;o;
+;i;i;"@T;7o;;{ ;iV;"@T;iV;@;8["article;T;iV;[o;9;$["margin-bottom;:o;	;	o;
+;iX;i;@	;@;o;
+;iX;i;o;;o;;;;"	50px;@;o;	;	o;
+;iX;i;@	;@;o;
+;iX;i;iX;o;	;	o;
+;iX;i;@	;@;@b;@;;o;	;	@j;@	;@;o;
+;iX;i;iX;<;=;[ ;>i o;9;$["padding;:o;	;	o;
+;iZ;i;@	;@;o;
+;iZ;i;o;;o;;;;"5px 10px;@;o;	;	o;
+;iZ;i;@	;@;o;
+;iZ;i;iZ;o;	;	o;
+;iZ;i;@	;@;@s;@;;o;	;	@{;@	;@;o;
+;iZ;i;iZ;<;=;[ ;>i o;-;.o;	;	o;
+;i\;i;@	;@;o;
+;i];i;o;	;	o;
+;i\;i;@	;@;o;
+;i];i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["h1;60;"" ;i\;o;	;	o;
+;i;i;0;@è;o;
+;i;i;"@è;7o;;{ ;i\;"@è;i\;@;8["h1;T;i\;[o;9;$["margin;:o;	;	o;
+;i^;i;@	;@;o;
+;i^;i;o;;o;;;;"	auto;@;o;	;	o;
+;i^;i;@	;@;o;
+;i^;i;i^;o;	;	o;
+;i^;i	;@	;@;@ù;@;;o;	;	@•;@	;@;o;
+;i^;i;i^;<;=;[ ;>i o;-;.o;	;	o;
+;i`;i	;@	;@;o;
+;ia;i	;o;	;	o;
+;i`;i	;@	;@;o;
+;ia;i	;/o;0;1[o;2;1[o;3;40;1[o;?	;$["a;60;"" ;i`;o;	;	o;
+;i;i;0;@π;o;
+;i;i;"@π;7o;;{ ;i`;"@π;i`;@;8["a;T;i`;[o;9;$["text-decoration;:o;	;	o;
+;ib;i;@	;@;o;
+;ib;i ;o;;o;;;;"	none;@;o;	;	o;
+;ib;i;@	;@;o;
+;ib;i ;ib;o;	;	o;
+;ib;i;@	;@;@«;@;;o;	;	@œ;@	;@;o;
+;ib;i;ib;<;=;[ ;>i o;-;.o;	;	o;
+;id;i;@	;@;o;
+;ie;i;o;	;	o;
+;id;i;@	;@;o;
+;ie;i;/o;0;1[o;2;1[o;3;40;1[o;E;"" ;ido;F
+;G;H;$["
+hover;"@·;id;I0;o;	;	o;
+;i;i;0;@·;o;
+;i;i;"@·;7o;;{ ;id;"@·;id;@;8["&:hover;T;id;[o;9;$["text-decoration;:o;	;	o;
+;if;i;@	;@;o;
+;if;i';o;;o;;;;"underline;@;o;	;	o;
+;if;i;@	;@;o;
+;if;i';if;o;	;	o;
+;if;i;@	;@;@Ú;@;;o;	;	@˙;@	;@;o;
+;if;i;if;<;=;[ ;>i ;>i ;>i ;>i o;-;.o;	;	o;
+;ik;i;@	;@;o;
+;il;i;o;	;	o;
+;ik;i;@	;@;o;
+;il;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["img;60;"" ;ik;o;	;	o;
+;i;i;0;@;o;
+;i;i	;"@;7o;;{ ;ik;"@;ik;@;8["img;T;ik;[o;-;.o;	;	o;
+;in;i;@	;@;o;
+;io;i;o;	;	o;
+;in;i;@	;@;o;
+;io;i;/o;0;1[o;2;1[o;3;40;1[o;E;"" ;ino;B;$["center;"@%;in;o;	;	o;
+;i;i;0;@%;o;
+;i;i;"@%;7o;;{ ;in;"@%;in;@;8["&.center;T;in;[o;9;$["display;:o;	;	o;
+;ip;i;@	;@;o;
+;ip;i;o;;o;;;;"
+block;@;o;	;	o;
+;ip;i;@	;@;o;
+;ip;i;ip;o;	;	o;
+;ip;i;@	;@;@6;@;;o;	;	@>;@	;@;o;
+;ip;i;ip;<;=;[ ;>i o;9;$["margin;:o;	;	o;
+;iq;i;@	;@;o;
+;iq;i;o;;o;;;;"0 auto;@;o;	;	o;
+;iq;i;@	;@;o;
+;iq;i;iq;o;	;	o;
+;iq;i;@	;@;@G;@;;o;	;	@O;@	;@;o;
+;iq;i;iq;<;=;[ ;>i ;>i o;9;$["padding;:o;	;	o;
+;is;i;@	;@;o;
+;is;i;o;;o;;;;"5px;@;o;	;	o;
+;is;i;@	;@;o;
+;is;i;is;o;	;	o;
+;is;i	;@	;@;@X;@;;o;	;	@`;@	;@;o;
+;is;i;is;<;=;[ ;>i o;9;$["box-shadow;:o;	;	o;
+;iu;i;@	;@;o;
+;iu;i";o;J;K[	o;	;o;L
+;M"0;N@ ;i ;O[ ;@;o;	;	o;
+;iu;i;@	;@;o;
+;iu;i;"@;iuo;	;o;L
+;M"0;N@ ;i ;O[ ;@;o;	;	o;
+;iu;i;@	;@;o;
+;iu;i;"@;iuo;	;o;L
+;M"3px;N[ ;i;O["px;@;o;	;	o;
+;iu;i;@	;@;o;
+;iu;i;"@;iuo;C;$"	grey;o;	;	o;
+;iu;i;@	;@;o;
+;iu;i";"@;@;iu;D"	grey;o;	;	o;
+;iu;i;@	;@;o;
+;iu;i";"@;@;iu;Z;[;o;	;	o;
+;iu;i	;@	;@;@i;@;;o;	;	@ç;@	;@;o;
+;iu;i;iu;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;ix;i;@	;@;o;
+;iy;i;o;	;	o;
+;ix;i;@	;@;o;
+;iy;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["a;60;"" ;ixo;B;$["btn;"@°;ix;o;	;	o;
+;i;i;0;@°;o;
+;i;i;"@°;7o;;{ ;ix;"@°;ix;@;8["
+a.btn;T;ix;[o;9;$["
+float;:o;	;	o;
+;iz;i;@	;@;o;
+;iz;i;o;;o;;;;"
+right;@;o;	;	o;
+;iz;i;@	;@;o;
+;iz;i;iz;o;	;	o;
+;iz;i
+;@	;@;@≤;@;;o;	;	@∫;@	;@;o;
+;iz;i;iz;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;i};i;@	;@;o;
+;i~;i;o;	;	o;
+;i};i;@	;@;o;
+;i~;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["p;60;"" ;i};o;	;	o;
+;i;i;0;@Œ;o;
+;i;i;"@Œ;7o;;{ ;i};"@Œ;i};@;8["p;T;i};[o;9;$["margin-top;:o;	;	o;
+;i;i;@	;@;o;
+;i;i;o;;o;;;;"5px;@;o;	;	o;
+;i;i;@	;@;o;
+;i;i;i;o;	;	o;
+;i;i
+;@	;@;@‹;@;;o;	;	@‰;@	;@;o;
+;i;i;i;<;=;[ ;>i ;>i ;>i o;-;.o;	;	o;
+;iÉ;i;@	;@;o;
+;iÑ;i;o;	;	o;
+;iÉ;i;@	;@;o;
+;iÑ;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["div;60;"" ;iÉo;B;$["featured-post;"@¯;iÉ;o;	;	o;
+;i;i;0;@¯;o;
+;i;i;"@¯;7o;;{ ;iÉ;"@¯;iÉ;@;8["div.featured-post;T;iÉ;[o;9;$["margin-bottom;:o;	;	o;
+;iÜ;i;@	;@;o;
+;iÜ;i;o;;o;;;;"	20px;@;o;	;	o;
+;iÜ;i;@	;@;o;
+;iÜ;i;iÜ;o;	;	o;
+;iÜ;i;@	;@;@	;@;;o;	;	@;@	;@;o;
+;iÜ;i;iÜ;<;=;[ ;>i o;-;.o;	;	o;
+;ià;i;@	;@;o;
+;iâ;i;o;	;	o;
+;ià;i;@	;@;o;
+;iâ;i;/o;0;1[o;2;1[o;3;40;1[o;E;"" ;ià;o;	;	o;
+;i;i;0;@#;o;
+;i;i;"@#;7o;;{ ;ià">o;3;40;1[o;?	;$["
+small;60;"@#;ià;o;	;	o;
+;i;i
+;0;@#;o;
+;i;i;"@#;7o;;{ ;ià;"@#;ià;@;8["& > small;T;ià;[o;9;$["
+color;:o;	;	o;
+;iä;i;@	;@;o;
+;iä;i;o;C;$"red;o;	;	o;
+;iä;i;@	;@;o;
+;iä;i;"@;@;iä;D"red;o;	;	o;
+;iä;i;@	;@;@<;@;;o;	;	@D;@	;@;o;
+;iä;i;iä;<;=;[ ;>i o;9;$["font-family;:o;	;	o;
+;iã;i;@	;@;o;
+;iã;i7;o;;o;;;;"''Nothing You Could Do', sans-serif;@;o;	;	o;
+;iã;i;@	;@;o;
+;iã;i7;iã;o;	;	o;
+;iã;i;@	;@;@M;@;;o;	;	@U;@	;@;o;
+;iã;i;iã;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;ié;i;@	;@;o;
+;iè;i;o;	;	o;
+;ié;i;@	;@;o;
+;iè;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["hr;60;"" ;ié;o;	;	o;
+;i;i;0;@i;o;
+;i;i;"@i;7o;;{ ;ié;"@i;ié;@;8["hr;T;ié;[o;9;$["
+color;:o;	;	o;
+;iê;i;@	;@;o;
+;iê;i;o;C;$"	grey;o;	;	o;
+;iê;i;@	;@;o;
+;iê;i;"@;@;iê;D"	grey;o;	;	o;
+;iê;i;@	;@;@w;@;;o;	;	@;@	;@;o;
+;iê;i;iê;<;=;[ ;>i o;9;$["opacity;:o;	;	o;
+;ië;i;@	;@;o;
+;ië;i;o;;o;;;;".5;@;o;	;	o;
+;ië;i;@	;@;o;
+;ië;i;ië;o;	;	o;
+;ië;i;@	;@;@à;@;;o;	;	@ê;@	;@;o;
+;ië;i;ië;<;=;[ ;>i ;>i ;>i o;-;.o;	;	o;
+;iï;i;@	;@;o;
+;iñ;i;o;	;	o;
+;iï;i;@	;@;o;
+;iñ;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["a;60;"" ;iïo;B;$["work-header;"@§;iï;o;	;	o;
+;i;i;0;@§;o;
+;i;i;"@§;7o;;{ ;iï;"@§;iï;@;8["a.work-header;T;iï;[o;9;$["font-family;:o;	;	o;
+;ió;i;@	;@;o;
+;ió;i6;o;;o;;;;"''Nothing You Could Do', sans-serif;@;o;	;	o;
+;ió;i;@	;@;o;
+;ió;i6;ió;o;	;	o;
+;ió;i;@	;@;@µ;@;;o;	;	@Ω;@	;@;o;
+;ió;i;ió;<;=;[ ;>i o;9;$["
+color;:o;	;	o;
+;iò;i;@	;@;o;
+;iò;i;o;C;$"	grey;o;	;	o;
+;iò;i;@	;@;o;
+;iò;i;"@;@;iò;D"	grey;o;	;	o;
+;iò;i;@	;@;@∆;@;;o;	;	@Œ;@	;@;o;
+;iò;i;iò;<;=;[ ;>i o;9;$["text-decoration;:o;	;	o;
+;iô;i;@	;@;o;
+;iô;i;o;;o;;;;"	none;@;o;	;	o;
+;iô;i;@	;@;o;
+;iô;i;iô;o;	;	o;
+;iô;i;@	;@;@◊;@;;o;	;	@ﬂ;@	;@;o;
+;iô;i;iô;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;iú;i;@	;@;o;
+;iù;i;o;	;	o;
+;iú;i;@	;@;o;
+;iù;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["article;60;"" ;iúo;B;$["	work;"@Û;iú;o;	;	o;
+;i;i;0;@Û;o;
+;i;i;"@Û;7o;;{ ;iú;"@Û;iú;@;8["article.work;T;iú;[o;9;$["position;:o;	;	o;
+;iû;i;@	;@;o;
+;iû;i;o;;o;;;;"relative;@;o;	;	o;
+;iû;i;@	;@;o;
+;iû;i;iû;o;	;	o;
+;iû;i;@	;@;@;@;;o;	;	@;@	;@;o;
+;iû;i;iû;<;=;[ ;>i o;-;.o;	;	o;
+;i†;i;@	;@;o;
+;i°;i;o;	;	o;
+;i†;i;@	;@;o;
+;i°;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["a;60;"" ;i†o;B;$["
+thumb;"@ ;i†;o;	;	o;
+;i;i;0;@ ;o;
+;i;i;"@ ;7o;;{ ;i†;"@ ;i†;@;8["a.thumb;T;i†;[o;9;$["position;:o;	;	o;
+;i¢;i;@	;@;o;
+;i¢;i;o;;o;;;;"relative;@;o;	;	o;
+;i¢;i;@	;@;o;
+;i¢;i;i¢;o;	;	o;
+;i¢;i;@	;@;@1;@;;o;	;	@9;@	;@;o;
+;i¢;i;i¢;<;=;[ ;>i o;9;$["display;:o;	;	o;
+;i§;i;@	;@;o;
+;i§;i;o;;o;;;;"table-cell;@;o;	;	o;
+;i§;i;@	;@;o;
+;i§;i;i§;o;	;	o;
+;i§;i;@	;@;@B;@;;o;	;	@J;@	;@;o;
+;i§;i;i§;<;=;[ ;>i o;9;$["background-color;:o;	;	o;
+;i¶;i;@	;@;o;
+;i¶;i/;o;P;$"	rgba;Q0;o;	;	o;
+;i¶;i;@	;@;o;
+;i¶;i/;"@;@;i¶;Ro;S;TIC;U{ ;V[ ;W{ ;X@Z;Y[	o;	;o;L
+;M"255;N@ ;iˇ;O[ ;@;o;	;	o;
+;i¶;i;@	;@;o;
+;i¶;i";"@;i¶o;	;o;L
+;M"255;N@ ;iˇ;O[ ;@;o;	;	o;
+;i¶;i#;@	;@;o;
+;i¶;i&;"@;i¶o;	;o;L
+;M"255;N@ ;iˇ;O[ ;@;o;	;	o;
+;i¶;i';@	;@;o;
+;i¶;i*;"@;i¶o;	;o;L
+;M"0.5;N@ ;f0.5;O[ ;@;o;	;	o;
+;i¶;i+;@	;@;o;
+;i¶;i.;"@;i¶;o;	;	o;
+;i¶;i;@	;@;@S;@;;o;	;	@|;@	;@;o;
+;i¶;i;i¶;<;=;[ ;>i o;@
+;;A;["5/*box-shadow: 0px 0px 3px lighten($grey, 20); */;@;i®;[ o;9;$["text-decoration;:o;	;	o;
+;i©;i;@	;@;o;
+;i©;i;o;;o;;;;"	none;@;o;	;	o;
+;i©;i;@	;@;o;
+;i©;i;i©;o;	;	o;
+;i©;i;@	;@;@â;@;;o;	;	@ë;@	;@;o;
+;i©;i;i©;<;=;[ ;>i o;9;$["-webkit-transition;:o;	;	o;
+;i´;i;@	;@;o;
+;i´;i*;o;;o;;;;"all .3s linear;@;o;	;	o;
+;i´;i;@	;@;o;
+;i´;i*;i´;o;	;	o;
+;i´;i;@	;@;@ö;@;;o;	;	@¢;@	;@;o;
+;i´;i;i´;<;=;[ ;>i o;-;.o;	;	o;
+;i≠;i;@	;@;o;
+;iÆ;i;o;	;	o;
+;i≠;i;@	;@;o;
+;iÆ;i;/o;0;1[o;2;1[o;3;40;1[o;E;"" ;i≠o;F
+;G;H;$["
+hover;"@¥;i≠;I0;o;	;	o;
+;i;i;0;@¥;o;
+;i;i;"@¥;7o;;{ ;i≠;"@¥;i≠;@;8["&:hover;T;i≠;[o;9;$["background-color;:o;	;	o;
+;iØ;i;@	;@;o;
+;iØ;i;o;;o;;;;"	#FFF;@;o;	;	o;
+;iØ;i;@	;@;o;
+;iØ;i;iØ;o;	;	o;
+;iØ;i	;@	;@;@≈;@;;o;	;	@Õ;@	;@;o;
+;iØ;i;iØ;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;i≤;i;@	;@;o;
+;i≥;i;o;	;	o;
+;i≤;i;@	;@;o;
+;i≥;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["img;60;"" ;i≤;o;	;	o;
+;i;i;0;@·;o;
+;i;i	;"@·;7o;;{ ;i≤;"@·;i≤;@;8["img;T;i≤;[o;9;$["
+width;:o;	;	o;
+;i¥;i;@	;@;o;
+;i¥;i;o;;o;;;;"
+200px;@;o;	;	o;
+;i¥;i;@	;@;o;
+;i¥;i;i¥;o;	;	o;
+;i¥;i	;@	;@;@Ô;@;;o;	;	@˜;@	;@;o;
+;i¥;i;i¥;<;=;[ ;>i o;9;$["padding;:o;	;	o;
+;i∂;i;@	;@;o;
+;i∂;i;o;;o;;;;"0px;@;o;	;	o;
+;i∂;i;@	;@;o;
+;i∂;i;i∂;o;	;	o;
+;i∂;i	;@	;@;@ ;@;;o;	;	@;@	;@;o;
+;i∂;i;i∂;<;=;[ ;>i o;9;$["box-shadow;:o;	;	o;
+;i∏;i;@	;@;o;
+;i∏;i;o;;o;;;;"	none;@;o;	;	o;
+;i∏;i;@	;@;o;
+;i∏;i;i∏;o;	;	o;
+;i∏;i	;@	;@;@;@;;o;	;	@;@	;@;o;
+;i∏;i;i∏;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;iª;i;@	;@;o;
+;iº;i;o;	;	o;
+;iª;i;@	;@;o;
+;iº;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["	span;60;"" ;iªo;B;$["subtitle;"@-;iª;o;	;	o;
+;i;i;0;@-;o;
+;i;i;"@-;7o;;{ ;iª;"@-;iª;@;8["span.subtitle;T;iª;[o;9;$["position;:o;	;	o;
+;iΩ;i;@	;@;o;
+;iΩ;i;o;;o;;;;"absolute;@;o;	;	o;
+;iΩ;i;@	;@;o;
+;iΩ;i;iΩ;o;	;	o;
+;iΩ;i	;@	;@;@>;@;;o;	;	@F;@	;@;o;
+;iΩ;i;iΩ;<;=;[ ;>i o;9;$["bottom;:o;	;	o;
+;iæ;i;@	;@;o;
+;iæ;i;o;;o;;;;"
+-.5em;@;o;	;	o;
+;iæ;i;@	;@;o;
+;iæ;i;iæ;o;	;	o;
+;iæ;i	;@	;@;@O;@;;o;	;	@W;@	;@;o;
+;iæ;i;iæ;<;=;[ ;>i o;9;$["	left;:o;	;	o;
+;iø;i;@	;@;o;
+;iø;i;o;;o;;;;"0px;@;o;	;	o;
+;iø;i;@	;@;o;
+;iø;i;iø;o;	;	o;
+;iø;i	;@	;@;@`;@;;o;	;	@h;@	;@;o;
+;iø;i;iø;<;=;[ ;>i o;9;$["display;:o;	;	o;
+;i¡;i;@	;@;o;
+;i¡;i;o;;o;;;;"
+block;@;o;	;	o;
+;i¡;i;@	;@;o;
+;i¡;i;i¡;o;	;	o;
+;i¡;i	;@	;@;@q;@;;o;	;	@y;@	;@;o;
+;i¡;i;i¡;<;=;[ ;>i o;9;$["
+width;:o;	;	o;
+;i¬;i;@	;@;o;
+;i¬;i;o;;o;;;;"	100%;@;o;	;	o;
+;i¬;i;@	;@;o;
+;i¬;i;i¬;o;	;	o;
+;i¬;i	;@	;@;@Ç;@;;o;	;	@ä;@	;@;o;
+;i¬;i;i¬;<;=;[ ;>i o;9;$["background-color;:o;	;	o;
+;iƒ;i;@	;@;o;
+;iƒ;i*;o;P;$"	rgba;Q0;o;	;	o;
+;iƒ;i;@	;@;o;
+;iƒ;i*;"@;@;iƒ;Ro;S;TIC;U{ ;V[ ;W{ ;X@ö;Y[o;C;$"	grey;o;	;	o;
+;iƒ;i ;@	;@;o;
+;iƒ;i%;"@;@;iƒ;D"	greyo;	;o;L
+;M"0.9;N@ ;f0.90000000000000002 ÃÕ;O[ ;@;o;	;	o;
+;iƒ;i';@	;@;o;
+;iƒ;i);"@;iƒ;o;	;	o;
+;iƒ;i	;@	;@;@ì;@;;o;	;	@≠;@	;@;o;
+;iƒ;i;iƒ;<;=;[ ;>i o;9;$["text-align;:o;	;	o;
+;i∆;i;@	;@;o;
+;i∆;i;o;;o;;;;"center;@;o;	;	o;
+;i∆;i;@	;@;o;
+;i∆;i;i∆;o;	;	o;
+;i∆;i	;@	;@;@∂;@;;o;	;	@æ;@	;@;o;
+;i∆;i;i∆;<;=;[ ;>i o;9;$["font-size;:o;	;	o;
+;i»;i;@	;@;o;
+;i»;i;o;;o;;;;"	.8em;@;o;	;	o;
+;i»;i;@	;@;o;
+;i»;i;i»;o;	;	o;
+;i»;i	;@	;@;@«;@;;o;	;	@œ;@	;@;o;
+;i»;i;i»;<;=;[ ;>i o;9;$["
+color;:o;	;	o;
+;i…;i;@	;@;o;
+;i…;i;o;;o;;;;"
+white;@;o;	;	o;
+;i…;i;@	;@;o;
+;i…;i;i…;o;	;	o;
+;i…;i	;@	;@;@ÿ;@;;o;	;	@‡;@	;@;o;
+;i…;i;i…;<;=;[ ;>i o;9;$["font-style;:o;	;	o;
+;iÀ;i;@	;@;o;
+;iÀ;i;o;;o;;;;"italic;@;o;	;	o;
+;iÀ;i;@	;@;o;
+;iÀ;i;iÀ;o;	;	o;
+;iÀ;i	;@	;@;@È;@;;o;	;	@Ò;@	;@;o;
+;iÀ;i;iÀ;<;=;[ ;>i ;>i ;>i o;-;.o;	;	o;
+;iœ;i;@	;@;o;
+;i–;i;o;	;	o;
+;iœ;i;@	;@;o;
+;i–;i;/o;0;1[o;2;1[o;3;40;1[o;B;$["work-image;"" ;iœ;o;	;	o;
+;i;i;0;@;o;
+;i;i;"@;7o;;{ ;iœ;"@;iœ;@;8[".work-image;T;iœ;[o;9;$["display;:o;	;	o;
+;i—;i;@	;@;o;
+;i—;i;o;;o;;;;"
+block;@;o;	;	o;
+;i—;i;@	;@;o;
+;i—;i;i—;o;	;	o;
+;i—;i;@	;@;@;@;;o;	;	@;@	;@;o;
+;i—;i;i—;<;=;[ ;>i o;9;$["margin;:o;	;	o;
+;i“;i;@	;@;o;
+;i“;i;o;;o;;;;"0 auto;@;o;	;	o;
+;i“;i;@	;@;o;
+;i“;i;i“;o;	;	o;
+;i“;i;@	;@;@$;@;;o;	;	@,;@	;@;o;
+;i“;i;i“;<;=;[ ;>i ;>i ;>i o;-;.o;	;	o;
+;i÷;i;@	;@;o;
+;i◊;i;o;	;	o;
+;i÷;i;@	;@;o;
+;i◊;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["div;60;"" ;i÷o;B;$["technology;"@@;i÷;o;	;	o;
+;i;i;0;@@;o;
+;i;i;"@@;7o;;{ ;i÷;"@@;i÷;@;8["div.technology;T;i÷;[o;9;$["margin-bottom;:o;	;	o;
+;iÿ;i;@	;@;o;
+;iÿ;i;o;;o;;;;"	10px;@;o;	;	o;
+;iÿ;i;@	;@;o;
+;iÿ;i;iÿ;o;	;	o;
+;iÿ;i;@	;@;@Q;@;;o;	;	@Y;@	;@;o;
+;iÿ;i;iÿ;<;=;[ ;>i o;9;$["background-color;:o;	;	o;
+;i⁄;i;@	;@;o;
+;i⁄;i;o;;o;;;;"	#FFF;@;o;	;	o;
+;i⁄;i;@	;@;o;
+;i⁄;i;i⁄;o;	;	o;
+;i⁄;i;@	;@;@b;@;;o;	;	@j;@	;@;o;
+;i⁄;i;i⁄;<;=;[ ;>i o;9;$["padding;:o;	;	o;
+;i€;i;@	;@;o;
+;i€;i;o;;o;;;;"	15px;@;o;	;	o;
+;i€;i;@	;@;o;
+;i€;i;i€;o;	;	o;
+;i€;i;@	;@;@s;@;;o;	;	@{;@	;@;o;
+;i€;i;i€;<;=;[ ;>i o;9;$["border-radius;:o;	;	o;
+;i›;i;@	;@;o;
+;i›;i;o;;o;;;;"3px;@;o;	;	o;
+;i›;i;@	;@;o;
+;i›;i;i›;o;	;	o;
+;i›;i;@	;@;@Ñ;@;;o;	;	@å;@	;@;o;
+;i›;i;i›;<;=;[ ;>i o;9;$["box-shadow;:o;	;	o;
+;iﬂ;i;@	;@;o;
+;iﬂ;i-;o;J;K[	o;	;o;L
+;M"0;N@ ;i ;O[ ;@;o;	;	o;
+;iﬂ;i;@	;@;o;
+;iﬂ;i;"@;iﬂo;	;o;L
+;M"0;N@ ;i ;O[ ;@;o;	;	o;
+;iﬂ;i;@	;@;o;
+;iﬂ;i;"@;iﬂo;	;o;L
+;M"2px;N[ ;i;O["px;@;o;	;	o;
+;iﬂ;i;@	;@;o;
+;iﬂ;i;"@;iﬂo;P;$"lighten;Q0;o;	;	o;
+;iﬂ;i;@	;@;o;
+;iﬂ;i-;"@;@;iﬂ;Ro;S;TIC;U{ ;V[ ;W{ ;X@µ;Y[o;C;$"	grey;o;	;	o;
+;iﬂ;i#;@	;@;o;
+;iﬂ;i(;"@;@;iﬂ;D"	greyo;	;o;L
+;M"20;N@ ;i;O[ ;@;o;	;	o;
+;iﬂ;i*;@	;@;o;
+;iﬂ;i,;"@;iﬂ;o;	;	o;
+;iﬂ;i;@	;@;o;
+;iﬂ;i-;"@;@;iﬂ;Z;[;o;	;	o;
+;iﬂ;i;@	;@;@ï;@;;o;	;	@ ;@	;@;o;
+;iﬂ;i;iﬂ;<;=;[ ;>i o;-;.o;	;	o;
+;i·;i;@	;@;o;
+;i‚;i;o;	;	o;
+;i·;i;@	;@;o;
+;i‚;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["a;60;"" ;i·;o;	;	o;
+;i;i;0;@ﬁ;o;
+;i;i;"@ﬁ;7o;;{ ;i·;"@ﬁ;i·;@;8["a;T;i·;[o;9;$["text-decoration;:o;	;	o;
+;i„;i;@	;@;o;
+;i„;i;o;;o;;;;"	none;@;o;	;	o;
+;i„;i;@	;@;o;
+;i„;i;i„;o;	;	o;
+;i„;i;@	;@;@Ï;@;;o;	;	@Ù;@	;@;o;
+;i„;i;i„;<;=;[ ;>i o;-;.o;	;	o;
+;iÂ;i;@	;@;o;
+;iÊ;i;o;	;	o;
+;iÂ;i;@	;@;o;
+;iÊ;i;/o;0;1[o;2;1[o;3;40;1[o;E;"" ;iÂo;F
+;G;H;$["
+hover;"@;iÂ;I0;o;	;	o;
+;i;i;0;@;o;
+;i;i;"@;7o;;{ ;iÂ;"@;iÂ;@;8["&:hover;T;iÂ;[o;9;$["
+color;:o;	;	o;
+;iÁ;i;@	;@;o;
+;iÁ;i;o;C;$"	grey;o;	;	o;
+;iÁ;i;@	;@;o;
+;iÁ;i;"@;@;iÁ;D"	grey;o;	;	o;
+;iÁ;i	;@	;@;@;@;;o;	;	@;@	;@;o;
+;iÁ;i;iÁ;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;iÍ;i;@	;@;o;
+;iÎ;i;o;	;	o;
+;iÍ;i;@	;@;o;
+;iÎ;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["h2;60;"" ;iÍ;o;	;	o;
+;i;i;0;@3;o;
+;i;i;"@3;7o;;{ ;iÍ;"@3;iÍ;@;8["h2;T;iÍ;[o;9;$["border-bottom;:o;	;	o;
+;iÏ;i;@	;@;o;
+;iÏ;i5;o;J;K[o;	;o;L
+;M"1px;N[ ;i;O["px;@;o;	;	o;
+;iÏ;i;@	;@;o;
+;iÏ;i;"@;iÏo;	;o;;;;"dashed;@;o;	;	o;
+;iÏ;i;@	;@;o;
+;iÏ;i";"@;iÏo;P;$"lighten;Q0;o;	;	o;
+;iÏ;i#;@	;@;o;
+;iÏ;i5;"@;@;iÏ;Ro;S;TIC;U{ ;V[ ;W{ ;X@Y;Y[o;C;$"	grey;o;	;	o;
+;iÏ;i+;@	;@;o;
+;iÏ;i0;"@;@;iÏ;D"	greyo;	;o;L
+;M"60;N@ ;iA;O[ ;@;o;	;	o;
+;iÏ;i2;@	;@;o;
+;iÏ;i4;"@;iÏ;o;	;	o;
+;iÏ;i;@	;@;o;
+;iÏ;i5;"@;@;iÏ;Z;[;o;	;	o;
+;iÏ;i	;@	;@;@A;@;;o;	;	@n;@	;@;o;
+;iÏ;i;iÏ;<;=;[ ;>i o;9;$["margin-bottom;:o;	;	o;
+;iÌ;i;@	;@;o;
+;iÌ;i;o;;o;;;;"	15px;@;o;	;	o;
+;iÌ;i;@	;@;o;
+;iÌ;i;iÌ;o;	;	o;
+;iÌ;i	;@	;@;@w;@;;o;	;	@;@	;@;o;
+;iÌ;i;iÌ;<;=;[ ;>i ;>i ;>i ;>i o;-;.o;	;	o;
+;iÚ;i;@	;@;o;
+;iÛ;i;o;	;	o;
+;iÚ;i;@	;@;o;
+;iÛ;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["a;60;"" ;iÚo;B;$["btn;"@ì;iÚ;o;	;	o;
+;i;i;0;@ì;o;
+;i;i;"@ì;7o;;{ ;iÚ;"@ì;iÚ;@;8["
+a.btn;T;iÚ;[o;9;$["display;:o;	;	o;
+;iÙ;i;@	;@;o;
+;iÙ;i;o;;o;;;;"inline-block;@;o;	;	o;
+;iÙ;i;@	;@;o;
+;iÙ;i;iÙ;o;	;	o;
+;iÙ;i;@	;@;@§;@;;o;	;	@¨;@	;@;o;
+;iÙ;i;iÙ;<;=;[ ;>i o;9;$["border-radius;:o;	;	o;
+;iı;i;@	;@;o;
+;iı;i;o;;o;;;;"3px;@;o;	;	o;
+;iı;i;@	;@;o;
+;iı;i;iı;o;	;	o;
+;iı;i;@	;@;@µ;@;;o;	;	@Ω;@	;@;o;
+;iı;i;iı;<;=;[ ;>i o;9;$["background-color;:o;	;	o;
+;iˆ;i;@	;@;o;
+;iˆ;i;o;C;$"red;o;	;	o;
+;iˆ;i;@	;@;o;
+;iˆ;i;"@;@;iˆ;D"red;o;	;	o;
+;iˆ;i;@	;@;@∆;@;;o;	;	@Œ;@	;@;o;
+;iˆ;i;iˆ;<;=;[ ;>i o;9;$["
+color;:o;	;	o;
+;i˜;i;@	;@;o;
+;i˜;i;o;;o;;;;"	#FFF;@;o;	;	o;
+;i˜;i;@	;@;o;
+;i˜;i;i˜;o;	;	o;
+;i˜;i;@	;@;@◊;@;;o;	;	@ﬂ;@	;@;o;
+;i˜;i;i˜;<;=;[ ;>i o;9;$["padding;:o;	;	o;
+;i¯;i;@	;@;o;
+;i¯;i;o;;o;;;;"10px 15px;@;o;	;	o;
+;i¯;i;@	;@;o;
+;i¯;i;i¯;o;	;	o;
+;i¯;i;@	;@;@Ë;@;;o;	;	@;@	;@;o;
+;i¯;i;i¯;<;=;[ ;>i o;9;$["text-decoration;:o;	;	o;
+;i˘;i;@	;@;o;
+;i˘;i;o;;o;;;;"	none;@;o;	;	o;
+;i˘;i;@	;@;o;
+;i˘;i;i˘;o;	;	o;
+;i˘;i;@	;@;@˘;@;;o;	;	@;@	;@;o;
+;i˘;i;i˘;<;=;[ ;>i o;9;$["font-size;:o;	;	o;
+;i˙;i;@	;@;o;
+;i˙;i;o;;o;;;;"	.9em;@;o;	;	o;
+;i˙;i;@	;@;o;
+;i˙;i;i˙;o;	;	o;
+;i˙;i;@	;@;@
+;@;;o;	;	@;@	;@;o;
+;i˙;i;i˙;<;=;[ ;>i o;9;$["text-shadow;:o;	;	o;
+;i˚;i;@	;@;o;
+;i˚;i;o;;o;;;;"	none;@;o;	;	o;
+;i˚;i;@	;@;o;
+;i˚;i;i˚;o;	;	o;
+;i˚;i;@	;@;@;@;;o;	;	@#;@	;@;o;
+;i˚;i;i˚;<;=;[ ;>i o;9;$["border-bottom;:o;	;	o;
+;i˝;i;@	;@;o;
+;i˝;i1;o;J;K[o;	;o;L
+;M"3px;N[ ;i;O["px;@;o;	;	o;
+;i˝;i;@	;@;o;
+;i˝;i;"@;i˝o;	;o;;;;"
+solid;@;o;	;	o;
+;i˝;i;@	;@;o;
+;i˝;i ;"@;i˝o;P;$"darken;Q0;o;	;	o;
+;i˝;i!;@	;@;o;
+;i˝;i1;"@;@;i˝;Ro;S;TIC;U{ ;V[ ;W{ ;X@D;Y[o;C;$"red;o;	;	o;
+;i˝;i(;@	;@;o;
+;i˝;i,;"@;@;i˝;D"redo;	;o;L
+;M"20;N@ ;i;O[ ;@;o;	;	o;
+;i˝;i.;@	;@;o;
+;i˝;i0;"@;i˝;o;	;	o;
+;i˝;i;@	;@;o;
+;i˝;i1;"@;@;i˝;Z;[;o;	;	o;
+;i˝;i;@	;@;@,;@;;o;	;	@Y;@	;@;o;
+;i˝;i;i˝;<;=;[ ;>i o;9;$["-webkit-font-smoothing;:o;	;	o;
+;iˇ;i ;@	;@;o;
+;iˇ;i+;o;;o;;;;"antialiased;@;o;	;	o;
+;iˇ;i ;@	;@;o;
+;iˇ;i+;iˇ;o;	;	o;
+;iˇ;i;@	;@;@b;@;;o;	;	@j;@	;@;o;
+;iˇ;i;iˇ;<;=;[ ;>i o;9;$["-webkit-transition;:o;	;	o;
+;i;i;@	;@;o;
+;i;i/;o;;o;;;;"all .5s ease-in-out;@;o;	;	o;
+;i;i;@	;@;o;
+;i;i/;i;o;	;	o;
+;i;i;@	;@;@s;@;;o;	;	@{;@	;@;o;
+;i;i;i;<;=;[ ;>i o;-;.o;	;	o;
+;i;i;@	;@;o;
+;i;i;o;	;	o;
+;i;i;@	;@;o;
+;i;i;/o;0;1[o;2;1[o;3;40;1[o;E;"" ;io;F
+;G;H;$["
+hover;"@ç;i;I0;o;	;	o;
+;i;i;0;@ç;o;
+;i;i;"@ç;7o;;{ ;io;2;1[o;3;40;1[o;E;"@ç;io;F
+;G;H;$["active;"@ç;i;I0;o;	;	o;
+;i;i;0;@ç;o;
+;i;i;"@ç;7o;;{ ;i;"@ç;i;@;8["&:hover, &:active;T;i;[o;9;$["background-color;:o;	;	o;
+;i;i;@	;@;o;
+;i;i,;o;P;$"darken;Q0;o;	;	o;
+;i;i;@	;@;o;
+;i;i,;"@;@;i;Ro;S;TIC;U{ ;V[ ;W{ ;X@≤;Y[o;C;$"red;o;	;	o;
+;i;i#;@	;@;o;
+;i;i';"@;@;i;D"redo;	;o;L
+;M"10;N@ ;i;O[ ;@;o;	;	o;
+;i;i);@	;@;o;
+;i;i+;"@;i;o;	;	o;
+;i;i
+;@	;@;@´;@;;o;	;	@ƒ;@	;@;o;
+;i;i;i;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;i;i;@	;@;o;
+;i	;i;o;	;	o;
+;i;i;@	;@;o;
+;i	;i;/o;0;1[o;2;1[o;3;40;1[o;E;"" ;io;F
+;G;H;$["active;"@÷;i;I0;o;	;	o;
+;i;i;0;@÷;o;
+;i;i;"@÷;7o;;{ ;i;"@÷;i;@;8["&:active;T;i;[o;9;$["border;:o;	;	o;
+;i
+;i;@	;@;o;
+;i
+;i;o;;o;;;;"	none;@;o;	;	o;
+;i
+;i;@	;@;o;
+;i
+;i;i
+;o;	;	o;
+;i
+;i	;@	;@;@Á;@;;o;	;	@Ô;@	;@;o;
+;i
+;i;i
+;<;=;[ ;>i ;>i ;>i o;-;.o;	;	o;
+;i;i;@	;@;o;
+;i;i;o;	;	o;
+;i;i;@	;@;o;
+;i;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["div;60;"" ;io;B;$["	hero;"@;i;o;	;	o;
+;i;i;0;@;o;
+;i;i;"@;7o;;{ ;i;"@;i;@;8["div.hero;T;i;[o;9;$["position;:o;	;	o;
+;i;i;@	;@;o;
+;i;i;o;;o;;;;"relative;@;o;	;	o;
+;i;i;@	;@;o;
+;i;i;i;o;	;	o;
+;i;i;@	;@;@;@;;o;	;	@;@	;@;o;
+;i;i;i;<;=;[ ;>i o;9;$["
+width;:o;	;	o;
+;i;i;@	;@;o;
+;i;i;o;;o;;;;"	100%;@;o;	;	o;
+;i;i;@	;@;o;
+;i;i;i;o;	;	o;
+;i;i;@	;@;@%;@;;o;	;	@-;@	;@;o;
+;i;i;i;<;=;[ ;>i o;9;$["height;:o;	;	o;
+;i;i;@	;@;o;
+;i;i;o;;o;;;;"
+250px;@;o;	;	o;
+;i;i;@	;@;o;
+;i;i;i;o;	;	o;
+;i;i;@	;@;@6;@;;o;	;	@>;@	;@;o;
+;i;i;i;<;=;[ ;>i o;9;$["margin-bottom;:o;	;	o;
+;i;i;@	;@;o;
+;i;i;o;;o;;;;"	20px;@;o;	;	o;
+;i;i;@	;@;o;
+;i;i;i;o;	;	o;
+;i;i;@	;@;@G;@;;o;	;	@O;@	;@;o;
+;i;i;i;<;=;[ ;>i o;9;$["border-radius;:o;	;	o;
+;i;i;@	;@;o;
+;i;i;o;;o;;;;"3px;@;o;	;	o;
+;i;i;@	;@;o;
+;i;i;i;o;	;	o;
+;i;i;@	;@;@X;@;;o;	;	@`;@	;@;o;
+;i;i;i;<;=;[ ;>i o;9;$["background-image;:o;	;	o;
+;i;i;@	;@;o;
+;i;i0;o;P;$"url;Q0;o;	;	o;
+;i;i;@	;@;o;
+;i;i0;"@;@;i;Ro;S;TIC;U{ ;V[ ;W{ ;X@p;Y[o;	;o;;:string;"../img/hero.jpg;@;o;	;	o;
+;i;i;@	;@;o;
+;i;i/;"@;i;o;	;	o;
+;i;i;@	;@;@i;@;;o;	;	@{;@	;@;o;
+;i;i;i;<;=;[ ;>i o;9;$["background-size;:o;	;	o;
+;i;i;@	;@;o;
+;i;i;o;;o;;;;"
+cover;@;o;	;	o;
+;i;i;@	;@;o;
+;i;i;i;o;	;	o;
+;i;i;@	;@;@Ñ;@;;o;	;	@å;@	;@;o;
+;i;i;i;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;i;i;@	;@;o;
+;i;i;o;	;	o;
+;i;i;@	;@;o;
+;i;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["div;60;"" ;io;B;$["
+blurb;"@†;i;o;	;	o;
+;i;i;0;@†;o;
+;i;i;"@†;7o;;{ ;i;"@†;i;@;8["div.blurb;T;i;[o;9;$["position;:o;	;	o;
+;i;i;@	;@;o;
+;i;i;o;;o;;;;"absolute;@;o;	;	o;
+;i;i;@	;@;o;
+;i;i;i;o;	;	o;
+;i;i;@	;@;@±;@;;o;	;	@π;@	;@;o;
+;i;i;i;<;=;[ ;>i o;9;$["z-index;:o;	;	o;
+;i ;i;@	;@;o;
+;i ;i;o;;o;;;;"0;@;o;	;	o;
+;i ;i;@	;@;o;
+;i ;i;i ;o;	;	o;
+;i ;i;@	;@;@¬;@;;o;	;	@ ;@	;@;o;
+;i ;i;i ;<;=;[ ;>i o;9;$["top;:o;	;	o;
+;i";i;@	;@;o;
+;i";i;o;;o;;;;"	20px;@;o;	;	o;
+;i";i;@	;@;o;
+;i";i;i";o;	;	o;
+;i";i;@	;@;@”;@;;o;	;	@€;@	;@;o;
+;i";i;i";<;=;[ ;>i o;9;$["bottom;:o;	;	o;
+;i#;i;@	;@;o;
+;i#;i;o;;o;;;;"	20px;@;o;	;	o;
+;i#;i;@	;@;o;
+;i#;i;i#;o;	;	o;
+;i#;i;@	;@;@‰;@;;o;	;	@Ï;@	;@;o;
+;i#;i;i#;<;=;[ ;>i o;9;$["	left;:o;	;	o;
+;i$;i;@	;@;o;
+;i$;i;o;;o;;;;"	20px;@;o;	;	o;
+;i$;i;@	;@;o;
+;i$;i;i$;o;	;	o;
+;i$;i;@	;@;@ı;@;;o;	;	@˝;@	;@;o;
+;i$;i;i$;<;=;[ ;>i o;9;$["
+right;:o;	;	o;
+;i%;i;@	;@;o;
+;i%;i;o;;o;;;;"50%;@;o;	;	o;
+;i%;i;@	;@;o;
+;i%;i;i%;o;	;	o;
+;i%;i;@	;@;@;@;;o;	;	@;@	;@;o;
+;i%;i;i%;<;=;[ ;>i o;9;$["
+width;:o;	;	o;
+;i';i;@	;@;o;
+;i';i;o;;o;;;;"45%;@;o;	;	o;
+;i';i;@	;@;o;
+;i';i;i';o;	;	o;
+;i';i;@	;@;@;@;;o;	;	@;@	;@;o;
+;i';i;i';<;=;[ ;>i o;9;$["overflow;:o;	;	o;
+;i);i;@	;@;o;
+;i);i;o;;o;;;;"hidden;@;o;	;	o;
+;i);i;@	;@;o;
+;i);i;i);o;	;	o;
+;i);i;@	;@;@(;@;;o;	;	@0;@	;@;o;
+;i);i;i);<;=;[ ;>i o;9;$["padding;:o;	;	o;
+;i+;i;@	;@;o;
+;i+;i;o;;o;;;;"	15px;@;o;	;	o;
+;i+;i;@	;@;o;
+;i+;i;i+;o;	;	o;
+;i+;i;@	;@;@9;@;;o;	;	@A;@	;@;o;
+;i+;i;i+;<;=;[ ;>i o;9;$["background-color;:o;	;	o;
+;i,;i;@	;@;o;
+;i,;i(;o;P;$"	rgba;Q0;o;	;	o;
+;i,;i;@	;@;o;
+;i,;i(;"@;@;i,;Ro;S;TIC;U{ ;V[ ;W{ ;X@Q;Y[	o;	;o;L
+;M"0;N@ ;i ;O[ ;@;o;	;	o;
+;i,;i;@	;@;o;
+;i,;i ;"@;i,o;	;o;L
+;M"0;N@ ;i ;O[ ;@;o;	;	o;
+;i,;i!;@	;@;o;
+;i,;i";"@;i,o;	;o;L
+;M"0;N@ ;i ;O[ ;@;o;	;	o;
+;i,;i#;@	;@;o;
+;i,;i$;"@;i,o;	;o;L
+;M"0.5;N@ ;f0.5;O[ ;@;o;	;	o;
+;i,;i%;@	;@;o;
+;i,;i';"@;i,;o;	;	o;
+;i,;i;@	;@;@J;@;;o;	;	@s;@	;@;o;
+;i,;i;i,;<;=;[ ;>i o;9;$["
+color;:o;	;	o;
+;i-;i;@	;@;o;
+;i-;i;o;;o;;;;"	#FFF;@;o;	;	o;
+;i-;i;@	;@;o;
+;i-;i;i-;o;	;	o;
+;i-;i;@	;@;@|;@;;o;	;	@Ñ;@	;@;o;
+;i-;i;i-;<;=;[ ;>i o;9;$["text-shadow;:o;	;	o;
+;i.;i;@	;@;o;
+;i.;i!;o;;o;;;;"0 0 1px #000;@;o;	;	o;
+;i.;i;@	;@;o;
+;i.;i!;i.;o;	;	o;
+;i.;i;@	;@;@ç;@;;o;	;	@ï;@	;@;o;
+;i.;i;i.;<;=;[ ;>i o;9;$["border-radius;:o;	;	o;
+;i0;i;@	;@;o;
+;i0;i;o;;o;;;;"5px;@;o;	;	o;
+;i0;i;@	;@;o;
+;i0;i;i0;o;	;	o;
+;i0;i;@	;@;@û;@;;o;	;	@¶;@	;@;o;
+;i0;i;i0;<;=;[ ;>i o;-;.o;	;	o;
+;i2;i;@	;@;o;
+;i3;i;o;	;	o;
+;i2;i;@	;@;o;
+;i3;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["h3;60;"" ;i2;o;	;	o;
+;i;i;0;@∫;o;
+;i;i;"@∫;7o;;{ ;i2;"@∫;i2;@;8["h3;T;i2;[o;9;$["font-family;:o;	;	o;
+;i4;i;@	;@;o;
+;i4;i8;o;;o;;;;"''Nothing You Could Do', sans-serif;@;o;	;	o;
+;i4;i;@	;@;o;
+;i4;i8;i4;o;	;	o;
+;i4;i	;@	;@;@»;@;;o;	;	@–;@	;@;o;
+;i4;i;i4;<;=;[ ;>i o;9;$["font-size;:o;	;	o;
+;i5;i;@	;@;o;
+;i5;i;o;;o;;;;"
+1.5em;@;o;	;	o;
+;i5;i;@	;@;o;
+;i5;i;i5;o;	;	o;
+;i5;i	;@	;@;@Ÿ;@;;o;	;	@·;@	;@;o;
+;i5;i;i5;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;i8;i;@	;@;o;
+;i9;i;o;	;	o;
+;i8;i;@	;@;o;
+;i9;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["a;60;"" ;i8o;B;$["btn;"@ı;i8;o;	;	o;
+;i;i;0;@ı;o;
+;i;i;"@ı;7o;;{ ;i8;"@ı;i8;@;8["
+a.btn;T;i8;[	o;9;$["position;:o;	;	o;
+;i:;i;@	;@;o;
+;i:;i;o;;o;;;;"absolute;@;o;	;	o;
+;i:;i;@	;@;o;
+;i:;i;i:;o;	;	o;
+;i:;i
+;@	;@;@;@;;o;	;	@;@	;@;o;
+;i:;i;i:;<;=;[ ;>i o;9;$["
+right;:o;	;	o;
+;i;;i;@	;@;o;
+;i;;i;o;;o;;;;"	10px;@;o;	;	o;
+;i;;i;@	;@;o;
+;i;;i;i;;o;	;	o;
+;i;;i
+;@	;@;@;@;;o;	;	@;@	;@;o;
+;i;;i;i;;<;=;[ ;>i o;9;$["bottom;:o;	;	o;
+;i<;i;@	;@;o;
+;i<;i;o;;o;;;;"	10px;@;o;	;	o;
+;i<;i;@	;@;o;
+;i<;i;i<;o;	;	o;
+;i<;i
+;@	;@;@(;@;;o;	;	@0;@	;@;o;
+;i<;i;i<;<;=;[ ;>i o;9;$["
+float;:o;	;	o;
+;i=;i;@	;@;o;
+;i=;i;o;;o;;;;"
+right;@;o;	;	o;
+;i=;i;@	;@;o;
+;i=;i;i=;o;	;	o;
+;i=;i
+;@	;@;@9;@;;o;	;	@A;@	;@;o;
+;i=;i;i=;<;=;[ ;>i ;>i ;>i o;-;.o;	;	o;
+;iA;i;@	;@;o;
+;iB;i;o;	;	o;
+;iA;i;@	;@;o;
+;iB;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["footer;60;"" ;iA;o;	;	o;
+;i;i;0;@U;o;
+;i;i;"@U;7o;;{ ;iA;"@U;iA;@;8["footer;T;iA;[o;9;$["
+clear;:o;	;	o;
+;iC;i;@	;@;o;
+;iC;i;o;;o;;;;"	both;@;o;	;	o;
+;iC;i;@	;@;o;
+;iC;i;iC;o;	;	o;
+;iC;i;@	;@;@c;@;;o;	;	@k;@	;@;o;
+;iC;i;iC;<;=;[ ;>i o;9;$["font-family;:o;	;	o;
+;iE;i;@	;@;o;
+;iE;i6;o;;o;;;;"''Nothing You Could Do', sans-serif;@;o;	;	o;
+;iE;i;@	;@;o;
+;iE;i6;iE;o;	;	o;
+;iE;i;@	;@;@t;@;;o;	;	@|;@	;@;o;
+;iE;i;iE;<;=;[ ;>i o;9;$["font-size;:o;	;	o;
+;iF;i;@	;@;o;
+;iF;i;o;;o;;;;"	.8em;@;o;	;	o;
+;iF;i;@	;@;o;
+;iF;i;iF;o;	;	o;
+;iF;i;@	;@;@Ö;@;;o;	;	@ç;@	;@;o;
+;iF;i;iF;<;=;[ ;>i o;9;$["
+color;:o;	;	o;
+;iH;i;@	;@;o;
+;iH;i;o;C;$"	grey;o;	;	o;
+;iH;i;@	;@;o;
+;iH;i;"@;@;iH;D"	grey;o;	;	o;
+;iH;i;@	;@;@ñ;@;;o;	;	@û;@	;@;o;
+;iH;i;iH;<;=;[ ;>i o;9;$["text-align;:o;	;	o;
+;iI;i;@	;@;o;
+;iI;i;o;;o;;;;"center;@;o;	;	o;
+;iI;i;@	;@;o;
+;iI;i;iI;o;	;	o;
+;iI;i;@	;@;@ß;@;;o;	;	@Ø;@	;@;o;
+;iI;i;iI;<;=;[ ;>i o;-;.o;	;	o;
+;iK;i;@	;@;o;
+;iL;i;o;	;	o;
+;iK;i;@	;@;o;
+;iL;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["ul;60;"" ;iKo;B;$["nav;"@√;iK;o;	;	o;
+;i;i;0;@√;o;
+;i;i;"@√;7o;;{ ;iK;"@√;iK;@;8["ul.nav;T;iK;[o;9;$["margin-left;:o;	;	o;
+;iM;i;@	;@;o;
+;iM;i;o;;o;;;;"
+-40px;@;o;	;	o;
+;iM;i;@	;@;o;
+;iM;i;iM;o;	;	o;
+;iM;i;@	;@;@‘;@;;o;	;	@‹;@	;@;o;
+;iM;i;iM;<;=;[ ;>i o;-;.o;	;	o;
+;iN;i;@	;@;o;
+;iO;i;o;	;	o;
+;iN;i;@	;@;o;
+;iO;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["li;60;"" ;iN;o;	;	o;
+;i;i;0;@;o;
+;i;i;"@;7o;;{ ;iN;"@;iN;@;8["li;T;iN;[o;-;.o;	;	o;
+;iQ;i	;@	;@;o;
+;iR;i	;o;	;	o;
+;iQ;i	;@	;@;o;
+;iR;i	;/o;0;1[o;2;1[o;3;40;1[o;?	;$["a;60;"" ;iQ;o;	;	o;
+;i;i;0;@	;o;
+;i;i;"@	;7o;;{ ;iQ;"@	;iQ;@;8["a;T;iQ;[o;9;$["font-size;:o;	;	o;
+;iS;i;@	;@;o;
+;iS;i;o;;o;;;;"
+1.3em;@;o;	;	o;
+;iS;i;@	;@;o;
+;iS;i;iS;o;	;	o;
+;iS;i
+;@	;@;@;@;;o;	;	@;@	;@;o;
+;iS;i;iS;<;=;[ ;>i o;9;$["
+color;:o;	;	o;
+;iT;i;@	;@;o;
+;iT;i;o;C;$"red;o;	;	o;
+;iT;i;@	;@;o;
+;iT;i;"@;@;iT;D"red;o;	;	o;
+;iT;i
+;@	;@;@(;@;;o;	;	@0;@	;@;o;
+;iT;i;iT;<;=;[ ;>i o;-;.o;	;	o;
+;iV;i
+;@	;@;o;
+;iW;i
+;o;	;	o;
+;iV;i
+;@	;@;o;
+;iW;i
+;/o;0;1[o;2;1[o;3;40;1[o;E;"" ;iVo;F
+;G;H;$["
+hover;"@B;iV;I0;o;	;	o;
+;i;i;0;@B;o;
+;i;i;"@B;7o;;{ ;iV;"@B;iV;@;8["&:hover;T;iV;[o;9;$["
+color;:o;	;	o;
+;iX;i;@	;@;o;
+;iX;i;o;C;$"	grey;o;	;	o;
+;iX;i;@	;@;o;
+;iX;i;"@;@;iX;D"	grey;o;	;	o;
+;iX;i;@	;@;@S;@;;o;	;	@[;@	;@;o;
+;iX;i;iX;<;=;[ ;>i ;>i ;>i o;-;.o;	;	o;
+;i\;i	;@	;@;o;
+;i];i	;o;	;	o;
+;i\;i	;@	;@;o;
+;i];i	;/o;0;1[o;2;1[o;3;40;1[o;E;"" ;i\o;F
+;G;H;$["
+hover;"@m;i\;I0;o;	;	o;
+;i;i;0;@m;o;
+;i;i;"@m;7o;;{ ;i\;"@m;i\;@;8["&:hover;T;i\;[o;9;$["background-color;:o;	;	o;
+;i^;i;@	;@;o;
+;i^;i);o;P;$"	rgba;Q0;o;	;	o;
+;i^;i;@	;@;o;
+;i^;i);"@;@;i^;Ro;S;TIC;U{ ;V[ ;W{ ;X@Ö;Y[	o;	;o;L
+;M"0;N@ ;i ;O[ ;@;o;	;	o;
+;i^;i!;@	;@;o;
+;i^;i";"@;i^o;	;o;L
+;M"0;N@ ;i ;O[ ;@;o;	;	o;
+;i^;i#;@	;@;o;
+;i^;i$;"@;i^o;	;o;L
+;M"0;N@ ;i ;O[ ;@;o;	;	o;
+;i^;i%;@	;@;o;
+;i^;i&;"@;i^o;	;o;L
+;M"0;N@ ;i ;O[ ;@;o;	;	o;
+;i^;i';@	;@;o;
+;i^;i(;"@;i^;o;	;	o;
+;i^;i
+;@	;@;@~;@;;o;	;	@¶;@	;@;o;
+;i^;i;i^;<;=;[ ;>i ;>i ;>i ;>i ;>i o;@
+;;A;["/*Mobile */;@;id;[ o:Sass::Tree::MediaNode;["screen"
+ and "(o;	;o;;;;"max-width;@;o;	;	o;
+;ie;i;@	;@;o;
+;ie;i";"@;ie": o;	;o;L
+;M"
+400px;N[ ;iê;O["px;@;o;	;	o;
+;ie;i$;@	;@;o;
+;ie;i);"@;ie");" ;o;	;	o;
+;ie;i;@	;@;o;
+;if;i;@;T;ie;[
+o;-;.o;	;	o;
+;ih;i;@	;@;o;
+;ii;i;o;	;	o;
+;ih;i;@	;@;o;
+;ii;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["div;60;"" ;iho;B;$["container;"@Ÿ;ih;o;	;	o;
+;i;i;0;@Ÿ;o;
+;i;i;"@Ÿ;7o;;{ ;ih;"@Ÿ;ih;@;8["div.container;T;ih;[o;9;$["padding-top;:o;	;	o;
+;ij;i;@	;@;o;
+;ij;i$;o;;o;;;;"10px !important;@;o;	;	o;
+;ij;i;@	;@;o;
+;ij;i$;ij;o;	;	o;
+;ij;i;@	;@;@Í;@;;o;	;	@Ú;@	;@;o;
+;ij;i;ij;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;im;i;@	;@;o;
+;in;i;o;	;	o;
+;im;i;@	;@;o;
+;in;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["header;60;"" ;im;o;	;	o;
+;i;i;0;@;o;
+;i;i;"@;7o;;{ ;im;"@;im;@;8["header;T;im;[o;9;$["position;:o;	;	o;
+;io;i;@	;@;o;
+;io;i;o;;o;;;;"relative;@;o;	;	o;
+;io;i;@	;@;o;
+;io;i;io;o;	;	o;
+;io;i;@	;@;@;@;;o;	;	@;@	;@;o;
+;io;i;io;<;=;[ ;>i o;-;.o;	;	o;
+;iq;i;@	;@;o;
+;ir;i;o;	;	o;
+;iq;i;@	;@;o;
+;ir;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["ul;60;"" ;iqo;B;$["nav;"@0;iq;o;	;	o;
+;i;i;0;@0;o;
+;i;i;"@0;7o;;{ ;iq;"@0;iq;@;8["ul.nav;T;iq;[o;9;$["margin-left;:o;	;	o;
+;is;i;@	;@;o;
+;is;i;o;;o;;;;"
+-40px;@;o;	;	o;
+;is;i;@	;@;o;
+;is;i;is;o;	;	o;
+;is;i	;@	;@;@A;@;;o;	;	@I;@	;@;o;
+;is;i;is;<;=;[ ;>i o;9;$["position;:o;	;	o;
+;iu;i;@	;@;o;
+;iu;i;o;;o;;;;"absolute;@;o;	;	o;
+;iu;i;@	;@;o;
+;iu;i;iu;o;	;	o;
+;iu;i	;@	;@;@R;@;;o;	;	@Z;@	;@;o;
+;iu;i;iu;<;=;[ ;>i o;9;$["top;:o;	;	o;
+;iv;i;@	;@;o;
+;iv;i;o;;o;;;;"	50px;@;o;	;	o;
+;iv;i;@	;@;o;
+;iv;i;iv;o;	;	o;
+;iv;i	;@	;@;@c;@;;o;	;	@k;@	;@;o;
+;iv;i;iv;<;=;[ ;>i o;9;$["	left;:o;	;	o;
+;iw;i;@	;@;o;
+;iw;i;o;;o;;;;"0;@;o;	;	o;
+;iw;i;@	;@;o;
+;iw;i;iw;o;	;	o;
+;iw;i	;@	;@;@t;@;;o;	;	@|;@	;@;o;
+;iw;i;iw;<;=;[ ;>i o;9;$["display;:o;	;	o;
+;iy;i;@	;@;o;
+;iy;i;o;;o;;;;"	none;@;o;	;	o;
+;iy;i;@	;@;o;
+;iy;i;iy;o;	;	o;
+;iy;i	;@	;@;@Ö;@;;o;	;	@ç;@	;@;o;
+;iy;i;iy;<;=;[ ;>i o;9;$["
+width;:o;	;	o;
+;iz;i;@	;@;o;
+;iz;i;o;;o;;;;"	100%;@;o;	;	o;
+;iz;i;@	;@;o;
+;iz;i;iz;o;	;	o;
+;iz;i	;@	;@;@ñ;@;;o;	;	@û;@	;@;o;
+;iz;i;iz;<;=;[ ;>i o;9;$["height;:o;	;	o;
+;i{;i;@	;@;o;
+;i{;i;o;;o;;;;"	auto;@;o;	;	o;
+;i{;i;@	;@;o;
+;i{;i;i{;o;	;	o;
+;i{;i	;@	;@;@ß;@;;o;	;	@Ø;@	;@;o;
+;i{;i;i{;<;=;[ ;>i o;9;$["text-align;:o;	;	o;
+;i|;i;@	;@;o;
+;i|;i;o;;o;;;;"center;@;o;	;	o;
+;i|;i;@	;@;o;
+;i|;i;i|;o;	;	o;
+;i|;i	;@	;@;@∏;@;;o;	;	@¿;@	;@;o;
+;i|;i;i|;<;=;[ ;>i o;-;.o;	;	o;
+;i~;i	;@	;@;o;
+;i;i	;o;	;	o;
+;i~;i	;@	;@;o;
+;i;i	;/o;0;1[o;2;1[o;3;40;1[o;?	;$["li;60;"" ;i~;o;	;	o;
+;i;i;0;@‘;o;
+;i;i;"@‘;7o;;{ ;i~;"@‘;i~;@;8["li;T;i~;[o;9;$["background-color;:o;	;	o;
+;iÄ;i;@	;@;o;
+;iÄ;i!;o;C;$"	grey;o;	;	o;
+;iÄ;i;@	;@;o;
+;iÄ;i!;"@;@;iÄ;D"	grey;o;	;	o;
+;iÄ;i
+;@	;@;@‚;@;;o;	;	@Í;@	;@;o;
+;iÄ;i;iÄ;<;=;[ ;>i o;9;$["display;:o;	;	o;
+;iÅ;i;@	;@;o;
+;iÅ;i;o;;o;;;;"
+block;@;o;	;	o;
+;iÅ;i;@	;@;o;
+;iÅ;i;iÅ;o;	;	o;
+;iÅ;i
+;@	;@;@Û;@;;o;	;	@˚;@	;@;o;
+;iÅ;i;iÅ;<;=;[ ;>i o;9;$["border-top;:o;	;	o;
+;iÉ;i;@	;@;o;
+;iÉ;i1;o;J;K[o;	;o;L
+;M"1px;N[ ;i;O["px;@;o;	;	o;
+;iÉ;i;@	;@;o;
+;iÉ;i;"@;iÉo;	;o;;;;"
+solid;@;o;	;	o;
+;iÉ;i;@	;@;o;
+;iÉ;i;"@;iÉo;P;$"lighten;Q0;o;	;	o;
+;iÉ;i ;@	;@;o;
+;iÉ;i1;"@;@;iÉ;Ro;S;TIC;U{ ;V[ ;W{ ;X@;Y[o;C;$"	grey;o;	;	o;
+;iÉ;i(;@	;@;o;
+;iÉ;i-;"@;@;iÉ;D"	greyo;	;o;L
+;M"5;N@ ;i
+;O[ ;@;o;	;	o;
+;iÉ;i/;@	;@;o;
+;iÉ;i0;"@;iÉ;o;	;	o;
+;iÉ;i;@	;@;o;
+;iÉ;i1;"@;@;iÉ;Z;[;o;	;	o;
+;iÉ;i
+;@	;@;@;@;;o;	;	@1;@	;@;o;
+;iÉ;i;iÉ;<;=;[ ;>i ;>i ;>i o;-;.o;	;	o;
+;iá;i;@	;@;o;
+;ià;i;o;	;	o;
+;iá;i;@	;@;o;
+;ià;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["a;60;"" ;iáo;B;$["menu-toggle;"@E;iá;o;	;	o;
+;i;i;0;@E;o;
+;i;i;"@E;7o;;{ ;iá;"@E;iá;@;8["a.menu-toggle;T;iá;[o;9;$["display;:o;	;	o;
+;iâ;i;@	;@;o;
+;iâ;i;o;;o;;;;"
+block;@;o;	;	o;
+;iâ;i;@	;@;o;
+;iâ;i;iâ;o;	;	o;
+;iâ;i	;@	;@;@V;@;;o;	;	@^;@	;@;o;
+;iâ;i;iâ;<;=;[ ;>i ;>i ;>i o;-;.o;	;	o;
+;iç;i;@	;@;o;
+;ié;i;o;	;	o;
+;iç;i;@	;@;o;
+;ié;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["article;60;"" ;iço;B;$["	work;"@r;iç;o;	;	o;
+;i;i;0;@r;o;
+;i;i;"@r;7o;;{ ;iç;"@r;iç;@;8["article.work;T;iç;[o;-;.o;	;	o;
+;iè;i;@	;@;o;
+;iê;i;o;	;	o;
+;iè;i;@	;@;o;
+;iê;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["a;60;"" ;ièo;B;$["
+thumb;"@é;iè;o;	;	o;
+;i;i;0;@é;o;
+;i;i;"@é;7o;;{ ;iè;"@é;iè;@;8["a.thumb;T;iè;[o;9;$["display;:o;	;	o;
+;ië;i;@	;@;o;
+;ië;i;o;;o;;;;"
+block;@;o;	;	o;
+;ië;i;@	;@;o;
+;ië;i;ië;o;	;	o;
+;ië;i	;@	;@;@ü;@;;o;	;	@ß;@	;@;o;
+;ië;i;ië;<;=;[ ;>i o;9;$["
+width;:o;	;	o;
+;ií;i;@	;@;o;
+;ií;i;o;;o;;;;"
+200px;@;o;	;	o;
+;ií;i;@	;@;o;
+;ií;i;ií;o;	;	o;
+;ií;i	;@	;@;@∞;@;;o;	;	@∏;@	;@;o;
+;ií;i;ií;<;=;[ ;>i o;9;$["margin;:o;	;	o;
+;iì;i;@	;@;o;
+;iì;i;o;;o;;;;"0 auto;@;o;	;	o;
+;iì;i;@	;@;o;
+;iì;i;iì;o;	;	o;
+;iì;i	;@	;@;@¡;@;;o;	;	@…;@	;@;o;
+;iì;i;iì;<;=;[ ;>i ;>i ;>i o;-;.o;	;	o;
+;ió;i;@	;@;o;
+;iò;i;o;	;	o;
+;ió;i;@	;@;o;
+;iò;i;/o;0;1[o;2;1[o;3;40;1[o;B;$["sidebar;"" ;ió;o;	;	o;
+;i;i;0;@›;o;
+;i;i;"@›;7o;;{ ;ió;"@›;ió;@;8[".sidebar;T;ió;[o;9;$["border-top;:o;	;	o;
+;iô;i;@	;@;o;
+;iô;i0;o;J;K[o;	;o;L
+;M"1px;N[ ;i;O["px;@;o;	;	o;
+;iô;i;@	;@;o;
+;iô;i;"@;iôo;	;o;;;;"
+solid;@;o;	;	o;
+;iô;i;@	;@;o;
+;iô;i;"@;iôo;P;$"lighten;Q0;o;	;	o;
+;iô;i;@	;@;o;
+;iô;i0;"@;@;iô;Ro;S;TIC;U{ ;V[ ;W{ ;X@;Y[o;C;$"	grey;o;	;	o;
+;iô;i&;@	;@;o;
+;iô;i+;"@;@;iô;D"	greyo;	;o;L
+;M"50;N@ ;i7;O[ ;@;o;	;	o;
+;iô;i-;@	;@;o;
+;iô;i/;"@;iô;o;	;	o;
+;iô;i;@	;@;o;
+;iô;i0;"@;@;iô;Z;[;o;	;	o;
+;iô;i;@	;@;@Î;@;;o;	;	@;@	;@;o;
+;iô;i;iô;<;=;[ ;>i o;9;$["padding-top;:o;	;	o;
+;iö;i;@	;@;o;
+;iö;i;o;;o;;;;"	10px;@;o;	;	o;
+;iö;i;@	;@;o;
+;iö;i;iö;o;	;	o;
+;iö;i;@	;@;@!;@;;o;	;	@);@	;@;o;
+;iö;i;iö;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;iù;i;@	;@;o;
+;iû;i;o;	;	o;
+;iù;i;@	;@;o;
+;iû;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["nav;60;"" ;iù;o;	;	o;
+;i;i;0;@=;o;
+;i;i	;"@=;7o;;{ ;iù;"@=;iù;@;8["nav;T;iù;[o;-;.o;	;	o;
+;iü;i;@	;@;o;
+;i†;i;o;	;	o;
+;iü;i;@	;@;o;
+;i†;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["ul;60;"" ;iü;o;	;	o;
+;i;i;0;@V;o;
+;i;i;"@V;7o;;{ ;iü;"@V;iü;@;8["ul;T;iü;[o;9;$["margin-left;:o;	;	o;
+;i°;i;@	;@;o;
+;i°;i;o;;o;;;;"
+-40px;@;o;	;	o;
+;i°;i;@	;@;o;
+;i°;i;i°;o;	;	o;
+;i°;i	;@	;@;@d;@;;o;	;	@l;@	;@;o;
+;i°;i;i°;<;=;[ ;>i ;>i ;>i ;>i o;@
+;;A;["/*Desktop */;@;i¶;[ o;];["screen"
+ and "(o;	;o;;;;"max-width;@;o;	;	o;
+;iß;i;@	;@;o;
+;iß;i";"@;iß": o;	;o;L
+;M"1020px;N[ ;i¸;O["px;@;o;	;	o;
+;iß;i$;@	;@;o;
+;iß;i*;"@;iß");" ;o;	;	o;
+;iß;i;@	;@;o;
+;i®;i;@;T;iß;[o;-;.o;	;	o;
+;i©;i;@	;@;o;
+;i™;i;o;	;	o;
+;i©;i;@	;@;o;
+;i™;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["div;60;"" ;i©o;B;$["	hero;"@ü;i©;o;	;	o;
+;i;i;0;@ü;o;
+;i;i;"@ü;7o;;{ ;i©;"@ü;i©;@;8["div.hero;T;i©;[o;9;$["border-radius;:o;	;	o;
+;i´;i;@	;@;o;
+;i´;i;o;;o;;;;"0;@;o;	;	o;
+;i´;i;@	;@;o;
+;i´;i;i´;o;	;	o;
+;i´;i;@	;@;@∞;@;;o;	;	@∏;@	;@;o;
+;i´;i;i´;<;=;[ ;>i ;>i ;>i o;@
+;;A;["/*Tablet */;@;iØ;[ o;];["screen"
+ and "(o;	;o;;;;"max-width;@;o;	;	o;
+;i∞;i;@	;@;o;
+;i∞;i";"@;i∞": o;	;o;L
+;M"
+800px;N[ ;i ;O["px;@;o;	;	o;
+;i∞;i$;@	;@;o;
+;i∞;i);"@;i∞");" ;o;	;	o;
+;i∞;i;@	;@;o;
+;i±;i;@;T;i∞;[o;-;.o;	;	o;
+;i≥;i;@	;@;o;
+;i¥;i;o;	;	o;
+;i≥;i;@	;@;o;
+;i¥;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["div;60;"" ;i≥o;B;$["
+blurb;"@Î;i≥;o;	;	o;
+;i;i;0;@Î;o;
+;i;i;"@Î;7o;;{ ;i≥;"@Î;i≥;@;8["div.blurb;T;i≥;[o;9;$["
+width;:o;	;	o;
+;iµ;i;@	;@;o;
+;iµ;i;o;;o;;;;"	auto;@;o;	;	o;
+;iµ;i;@	;@;o;
+;iµ;i;iµ;o;	;	o;
+;iµ;i
+;@	;@;@¸;@;;o;	;	@;@	;@;o;
+;iµ;i;iµ;<;=;[ ;>i o;9;$["
+right;:o;	;	o;
+;i∂;i;@	;@;o;
+;i∂;i;o;;o;;;;"	20px;@;o;	;	o;
+;i∂;i;@	;@;o;
+;i∂;i;i∂;o;	;	o;
+;i∂;i
+;@	;@;@;@;;o;	;	@;@	;@;o;
+;i∂;i;i∂;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;iπ;i;@	;@;o;
+;i∫;i;o;	;	o;
+;iπ;i;@	;@;o;
+;i∫;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["footer;60;"" ;iπ;o;	;	o;
+;i;i;0;@);o;
+;i;i;"@);7o;;{ ;iπ;"@);iπ;@;8["footer;T;iπ;[	o;9;$["height;:o;	;	o;
+;iª;i;@	;@;o;
+;iª;i;o;;o;;;;"	auto;@;o;	;	o;
+;iª;i;@	;@;o;
+;iª;i;iª;o;	;	o;
+;iª;i
+;@	;@;@7;@;;o;	;	@?;@	;@;o;
+;iª;i;iª;<;=;[ ;>i o;9;$["text-align;:o;	;	o;
+;iº;i;@	;@;o;
+;iº;i;o;;o;;;;"center;@;o;	;	o;
+;iº;i;@	;@;o;
+;iº;i;iº;o;	;	o;
+;iº;i
+;@	;@;@H;@;;o;	;	@P;@	;@;o;
+;iº;i;iº;<;=;[ ;>i o;-;.o;	;	o;
+;iæ;i
+;@	;@;o;
+;iø;i
+;o;	;	o;
+;iæ;i
+;@	;@;o;
+;iø;i
+;/o;0;1[o;2;1[o;3;40;1[o;?	;$["ul;60;"" ;iæo;B;$["nav;"@d;iæ;o;	;	o;
+;i;i;0;@d;o;
+;i;i;"@d;7o;;{ ;iæ;"@d;iæ;@;8["ul.nav;T;iæ;[o;9;$["display;:o;	;	o;
+;i¿;i;@	;@;o;
+;i¿;i$;o;;o;;;;"block !important;@;o;	;	o;
+;i¿;i;@	;@;o;
+;i¿;i$;i¿;o;	;	o;
+;i¿;i;@	;@;@u;@;;o;	;	@};@	;@;o;
+;i¿;i;i¿;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;i√;i
+;@	;@;o;
+;iƒ;i
+;o;	;	o;
+;i√;i
+;@	;@;o;
+;iƒ;i
+;/o;0;1[o;2;1[o;3;40;1[o;?	;$["ul;60;"" ;i√o;B;$["nav;"@ë;i√;o;	;	o;
+;i;i;0;@ë;o;
+;i;i;"@ë;7o;;{ ;i√o;2;1[o;3;40;1[o;?	;$["p;60;"@ë;i√;o;	;	o;
+;i;i;0;@ë;o;
+;i;i;"@ë;7o;;{ ;i√;"@ë;i√;@;8["ul.nav, p;T;i√;[	o;9;$["position;:o;	;	o;
+;i≈;i;@	;@;o;
+;i≈;i;o;;o;;;;"relative;@;o;	;	o;
+;i≈;i;@	;@;o;
+;i≈;i;i≈;o;	;	o;
+;i≈;i;@	;@;@Æ;@;;o;	;	@∂;@	;@;o;
+;i≈;i;i≈;<;=;[ ;>i o;9;$["	left;:o;	;	o;
+;i∆;i;@	;@;o;
+;i∆;i;o;;o;;;;"0;@;o;	;	o;
+;i∆;i;@	;@;o;
+;i∆;i;i∆;o;	;	o;
+;i∆;i;@	;@;@ø;@;;o;	;	@«;@	;@;o;
+;i∆;i;i∆;<;=;[ ;>i o;9;$["
+right;:o;	;	o;
+;i∆;i;@	;@;o;
+;i∆;i;o;;o;;;;"0;@;o;	;	o;
+;i∆;i;@	;@;o;
+;i∆;i;i∆;o;	;	o;
+;i∆;i;@	;@;@–;@;;o;	;	@ÿ;@	;@;o;
+;i∆;i;i∆;<;=;[ ;>i o;9;$["
+width;:o;	;	o;
+;i«;i;@	;@;o;
+;i«;i;o;;o;;;;"	auto;@;o;	;	o;
+;i«;i;@	;@;o;
+;i«;i;i«;o;	;	o;
+;i«;i;@	;@;@·;@;;o;	;	@È;@	;@;o;
+;i«;i;i«;<;=;[ ;>i ;>i ;>i o;-;.o;	;	o;
+;iÀ;i;@	;@;o;
+;iÃ;i;o;	;	o;
+;iÀ;i;@	;@;o;
+;iÃ;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["div;60;"" ;iÀo;B;$["articles;"@˝;iÀ;o;	;	o;
+;i;i;0;@˝;o;
+;i;i;"@˝;7o;;{ ;iÀo;2;1[o;3;40;1[o;?	;$["div;60;"@˝;iÀo;B;$["sidebar;"@˝;iÀ;o;	;	o;
+;i;i;0;@˝;o;
+;i;i;"@˝;7o;;{ ;iÀ;"@˝;iÀ;@;8["div.articles, div.sidebar;T;iÀ;[o;9;$["position;:o;	;	o;
+;iÕ;i;@	;@;o;
+;iÕ;i;o;;o;;;;"relative;@;o;	;	o;
+;iÕ;i;@	;@;o;
+;iÕ;i;iÕ;o;	;	o;
+;iÕ;i;@	;@;@;@;;o;	;	@%;@	;@;o;
+;iÕ;i;iÕ;<;=;[ ;>i o;9;$["margin;:o;	;	o;
+;iŒ;i;@	;@;o;
+;iŒ;i;o;;o;;;;"0 auto;@;o;	;	o;
+;iŒ;i;@	;@;o;
+;iŒ;i;iŒ;o;	;	o;
+;iŒ;i;@	;@;@.;@;;o;	;	@6;@	;@;o;
+;iŒ;i;iŒ;<;=;[ ;>i o;9;$["
+width;:o;	;	o;
+;iœ;i;@	;@;o;
+;iœ;i;o;;o;;;;"90%;@;o;	;	o;
+;iœ;i;@	;@;o;
+;iœ;i;iœ;o;	;	o;
+;iœ;i	;@	;@;@?;@;;o;	;	@G;@	;@;o;
+;iœ;i;iœ;<;=;[ ;>i o;9;$["max-width;:o;	;	o;
+;i–;i;@	;@;o;
+;i–;i;o;;o;;;;"	100%;@;o;	;	o;
+;i–;i;@	;@;o;
+;i–;i;i–;o;	;	o;
+;i–;i	;@	;@;@P;@;;o;	;	@X;@	;@;o;
+;i–;i;i–;<;=;[ ;>i o;9;$["
+float;:o;	;	o;
+;i—;i;@	;@;o;
+;i—;i;o;;o;;;;"	none;@;o;	;	o;
+;i—;i;@	;@;o;
+;i—;i;i—;o;	;	o;
+;i—;i	;@	;@;@a;@;;o;	;	@i;@	;@;o;
+;i—;i;i—;<;=;[ ;>i o;9;$["
+clear;:o;	;	o;
+;i“;i;@	;@;o;
+;i“;i;o;;o;;;;"	both;@;o;	;	o;
+;i“;i;@	;@;o;
+;i“;i;i“;o;	;	o;
+;i“;i	;@	;@;@r;@;;o;	;	@z;@	;@;o;
+;i“;i;i“;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;i’;i;@	;@;o;
+;i÷;i;o;	;	o;
+;i’;i;@	;@;o;
+;i÷;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["div;60;"" ;i’o;B;$["container;"@é;i’;o;	;	o;
+;i;i;0;@é;o;
+;i;i;"@é;7o;;{ ;i’;"@é;i’;@;8["div.container;T;i’;[o;9;$["padding;:o;	;	o;
+;i◊;i;@	;@;o;
+;i◊;i;o;;o;;;;"60px 0px;@;o;	;	o;
+;i◊;i;@	;@;o;
+;i◊;i;i◊;o;	;	o;
+;i◊;i	;@	;@;@ü;@;;o;	;	@ß;@	;@;o;
+;i◊;i;i◊;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;i⁄;i;@	;@;o;
+;i€;i;o;	;	o;
+;i⁄;i;@	;@;o;
+;i€;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["div;60;"" ;i⁄o;B;$["
+owner;"@ª;i⁄;o;	;	o;
+;i;i;0;@ª;o;
+;i;i;"@ª;7o;;{ ;i⁄;"@ª;i⁄;@;8["div.owner;T;i⁄;[o;9;$["margin-bottom;:o;	;	o;
+;i‹;i;@	;@;o;
+;i‹;i;o;;o;;;;"	35px;@;o;	;	o;
+;i‹;i;@	;@;o;
+;i‹;i;i‹;o;	;	o;
+;i‹;i	;@	;@;@Ã;@;;o;	;	@‘;@	;@;o;
+;i‹;i;i‹;<;=;[ ;>i ;>i o;-;.o;	;	o;
+;iﬂ;i;@	;@;o;
+;i‡;i;o;	;	o;
+;iﬂ;i;@	;@;o;
+;i‡;i;/o;0;1[o;2;1[o;3;40;1[o;?	;$["header;60;"" ;iﬂ;o;	;	o;
+;i;i;0;@Ë;o;
+;i;i;"@Ë;7o;;{ ;iﬂ;"@Ë;iﬂ;@;8["header;T;iﬂ;[o;-;.o;	;	o;
+;i·;i	;@	;@;o;
+;i‚;i	;o;	;	o;
+;i·;i	;@	;@;o;
+;i‚;i	;/o;0;1[o;2;1[o;3;40;1[o;?	;$["img;60;"" ;i·;o;	;	o;
+;i;i;0;@;o;
+;i;i	;"@;7o;;{ ;i·;"@;i·;@;8["img;T;i·;[o;9;$["display;:o;	;	o;
+;i„;i;@	;@;o;
+;i„;i;o;;o;;;;"	none;@;o;	;	o;
+;i„;i;@	;@;o;
+;i„;i;i„;o;	;	o;
+;i„;i
+;@	;@;@;@;;o;	;	@;@	;@;o;
+;i„;i;i„;<;=;[ ;>i ;>i ;>i ;>i o;-;.o;	;	o;
+;iË;i;@	;@;o;
+;iÈ;i;o;	;	o;
+;iË;i;@	;@;o;
+;iÈ;i;/o;0;1[o;2;1[o;3;40;1[o;B;$["twitter-tweet;"" ;iË;o;	;	o;
+;i;i;0;@+;o;
+;i;i;"@+;7o;;{ ;iË;"@+;iË;@;8[".twitter-tweet;T;iË;[o;9;$["max-width;:o;	;	o;
+;iÍ;i;@	;@;o;
+;iÍ;i!;o;;o;;;;"100% !important;@;o;	;	o;
+;iÍ;i;@	;@;o;
+;iÍ;i!;iÍ;o;	;	o;
+;iÍ;i;@	;@;@9;@;;o;	;	@A;@	;@;o;
+;iÍ;i;iÍ;<;=;[ ;>i o;9;$["margin;:o;	;	o;
+;iÎ;i;@	;@;o;
+;iÎ;i ;o;;o;;;;"0 auto !important;@;o;	;	o;
+;iÎ;i;@	;@;o;
+;iÎ;i ;iÎ;o;	;	o;
+;iÎ;i;@	;@;@J;@;;o;	;	@R;@	;@;o;
+;iÎ;i;iÎ;<;=;[ ;>i ;>i 

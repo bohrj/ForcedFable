@@ -1,0 +1,41 @@
+/*
+
+Theme Name: Forced Fable Productions
+Theme URI: http://jordanforeman.com/
+Description: A custom wordpress porfolio theme developed for forcedfable.com
+Author: Jordan Foreman
+Version: 1.1
+Tags: minimalist, two-column, responsive, high contrast, blog, tech
+License: Private
+
+*/
+
+/* Live Changes */
+article.single p {
+	margin: 8px auto;
+}
+
+.container {
+	padding-top: 65px !important;
+}
+
+#menu-main-menu li {
+	padding: 15px !important;
+}
+
+#menu-main-menu li a {
+	font-size: 1.3em !important;
+}
+
+@media screen and (max-width: 480px) {
+
+article h1 {
+	padding-left: 15px !important;
+	text-indent: -15px;
+}
+
+.articles {
+	margin: 0 auto !important;
+}
+
+}
